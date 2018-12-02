@@ -48,6 +48,10 @@ playground.xcworkspace
 #
 # Pods/
 
+AFError.swift 
+Pods
+TheMealDB/TheMealDB/Support/Assets.xcassets
+
 # Carthage
 #
 # Add this line if you want to avoid checking in source code from Carthage dependencies.
