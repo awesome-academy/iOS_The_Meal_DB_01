@@ -26,7 +26,7 @@ public class Dimension {
         heightScale = UIScreen.main.bounds.height / heightIP6
     }
     
-    //MARK: FontSize
+    //MARK: - FontSize
     public var logoFontSize_36: CGFloat {
         return 36 * heightScale
     }
@@ -63,7 +63,7 @@ public class Dimension {
         return 10 * self.heightScale
     }
     
-    //MARK: Spacing
+    //MARK: - Spacing
     var smallHorizontalMargin: CGFloat {
         return 4 * self.widthScale
     }
@@ -164,7 +164,7 @@ public class Dimension {
         return 344 * self.widthScale
     }
     
-    //MARK: Button
+    //MARK: - Button
     var defaultWidthButton: CGFloat {
         return 291 * self.widthScale
     }
@@ -221,7 +221,7 @@ public class Dimension {
         return 24 * self.widthScale
     }
     
-    //MARK: Other
+    //MARK: - Other
     var widthImageLogo: CGFloat {
         return 94 * self.widthScale
     }
@@ -294,7 +294,7 @@ public class Dimension {
         return 363 * self.widthScale
     }
     
-    //MARK: Textfield
+    //MARK: - Textfield
     var widthTextfield_344: CGFloat {
         return 344 * self.widthScale
     }
@@ -319,7 +319,7 @@ public class Dimension {
         return 35 * self.heightScale
     }
     
-    //MARK: SIDE MENU
+    //MARK: - SIDE MENU
     var widthSideMenu: CGFloat {
         return 300 * self.widthScale
     }
@@ -340,7 +340,7 @@ public class Dimension {
         return 16 * self.heightScale
     }
     
-    //MARK: Segment
+    //MARK: - Segment
     var widthCustomSegment: CGFloat {
         return 327 * self.widthScale
     }
@@ -349,7 +349,7 @@ public class Dimension {
         return 36 * self.heightScale
     }
     
-    //MARK: Message
+    //MARK: - Message
     var widthMessage: CGFloat {
         return 265 * self.widthScale
     }
@@ -358,7 +358,7 @@ public class Dimension {
         return 10 * self.heightScale
     }
     
-    //MARK: SEARCH
+    //MARK: - SEARCH
     var heightContainsViewSearchBar: CGFloat {
         return 50 * self.heightScale
     }
@@ -367,12 +367,12 @@ public class Dimension {
         return 45 * self.heightScale
     }
     
-    //MARK: CHART
+    //MARK: - CHART
     var heightPieChart: CGFloat {
         return 311 * self.heightScale
     }
     
-    //MARK: HEIGHT
+    //MARK: - HEIGHT
     var height_128: CGFloat {
         return 128 * self.heightScale
     }
@@ -381,8 +381,16 @@ public class Dimension {
         return 232 * self.heightScale
     }
     
-    //  MARK: WIDTH
+    //  MARK: - WIDTH
     var width_79: CGFloat {
         return 79 * self.heightScale
+    }
+    
+    var collectionViewCellHeight: CGFloat {
+        return 100 * self.heightScale
+    }
+    
+    var collectionViewCellWidth: CGFloat {
+        return 208 * self.widthScale
     }
 }

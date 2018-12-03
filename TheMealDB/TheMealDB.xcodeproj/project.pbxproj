@@ -17,14 +17,14 @@
 		0445D50E21B012620017B4E3 /* CustomTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0445D50C21B012620017B4E3 /* CustomTableViewController.swift */; };
 		0445D50F21B012620017B4E3 /* CustomTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0445D50D21B012620017B4E3 /* CustomTableViewController.xib */; };
 		0445D51221B029A40017B4E3 /* TableViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0445D51121B029A40017B4E3 /* TableViewPresenter.swift */; };
-		0445D51521B031510017B4E3 /* MealModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0445D51421B031510017B4E3 /* MealModel.swift */; };
+		0445D51521B031510017B4E3 /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0445D51421B031510017B4E3 /* Meal.swift */; };
 		044829B921AE46B500AD2CAD /* Dimesion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044829B621AE46B500AD2CAD /* Dimesion.swift */; };
 		044829BA21AE46B500AD2CAD /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044829B721AE46B500AD2CAD /* Resource.swift */; };
 		044829BB21AE46B500AD2CAD /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044829B821AE46B500AD2CAD /* Theme.swift */; };
 		044829BE21AE46C000AD2CAD /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044829BC21AE46C000AD2CAD /* BaseViewController.swift */; };
 		044829BF21AE46C000AD2CAD /* BaseUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044829BD21AE46C000AD2CAD /* BaseUIView.swift */; };
 		044829C921AE4F3200AD2CAD /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044829C821AE4F3200AD2CAD /* HomeViewController.swift */; };
-		047521B021B13A8C005925F1 /* CategoriesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047521AF21B13A8C005925F1 /* CategoriesModel.swift */; };
+		047521B021B13A8C005925F1 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047521AF21B13A8C005925F1 /* Model.swift */; };
 		04C3941C21AE7D3F00834E3F /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C3941B21AE7D3F00834E3F /* TabBarController.swift */; };
 		04C4AF2021AEA9B5004FA617 /* CustomCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C4AF1B21AEA9B5004FA617 /* CustomCollectionViewController.swift */; };
 		04C4AF2121AEA9B5004FA617 /* CustomCollectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04C4AF1C21AEA9B5004FA617 /* CustomCollectionViewController.xib */; };
@@ -47,14 +47,14 @@
 		0445D50C21B012620017B4E3 /* CustomTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewController.swift; sourceTree = "<group>"; };
 		0445D50D21B012620017B4E3 /* CustomTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTableViewController.xib; sourceTree = "<group>"; };
 		0445D51121B029A40017B4E3 /* TableViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewPresenter.swift; sourceTree = "<group>"; };
-		0445D51421B031510017B4E3 /* MealModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealModel.swift; sourceTree = "<group>"; };
+		0445D51421B031510017B4E3 /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
 		044829B621AE46B500AD2CAD /* Dimesion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dimesion.swift; sourceTree = "<group>"; };
 		044829B721AE46B500AD2CAD /* Resource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
 		044829B821AE46B500AD2CAD /* Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		044829BC21AE46C000AD2CAD /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		044829BD21AE46C000AD2CAD /* BaseUIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseUIView.swift; sourceTree = "<group>"; };
 		044829C821AE4F3200AD2CAD /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		047521AF21B13A8C005925F1 /* CategoriesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesModel.swift; sourceTree = "<group>"; };
+		047521AF21B13A8C005925F1 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		04C3941B21AE7D3F00834E3F /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		04C4AF1B21AEA9B5004FA617 /* CustomCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewController.swift; sourceTree = "<group>"; };
 		04C4AF1C21AEA9B5004FA617 /* CustomCollectionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomCollectionViewController.xib; sourceTree = "<group>"; };
@@ -155,7 +155,7 @@
 		0445D51321B0311D0017B4E3 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				0445D51421B031510017B4E3 /* MealModel.swift */,
+				0445D51421B031510017B4E3 /* Meal.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -239,7 +239,7 @@
 		047521AE21B12B7A005925F1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				047521AF21B13A8C005925F1 /* CategoriesModel.swift */,
+				047521AF21B13A8C005925F1 /* Model.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -378,11 +378,13 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-TheMealDB/Pods-TheMealDB-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -426,11 +428,11 @@
 				04133A1721B17E6D004AEED5 /* CustomMealView.swift in Sources */,
 				044829B921AE46B500AD2CAD /* Dimesion.swift in Sources */,
 				04C4AF2021AEA9B5004FA617 /* CustomCollectionViewController.swift in Sources */,
-				047521B021B13A8C005925F1 /* CategoriesModel.swift in Sources */,
+				047521B021B13A8C005925F1 /* Model.swift in Sources */,
 				04278DC421ACFAE4007CB3F0 /* TheMealDB.xcdatamodeld in Sources */,
 				044829BE21AE46C000AD2CAD /* BaseViewController.swift in Sources */,
 				04C4AF2221AEA9B5004FA617 /* CustomCollectionViewCell.swift in Sources */,
-				0445D51521B031510017B4E3 /* MealModel.swift in Sources */,
+				0445D51521B031510017B4E3 /* Meal.swift in Sources */,
 				04EDD9F521AED69900CABF76 /* CollectionViewPresenter.swift in Sources */,
 				0445D50921B012110017B4E3 /* CustomTableViewCell.swift in Sources */,
 			);

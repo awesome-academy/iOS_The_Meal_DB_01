@@ -9,9 +9,8 @@
 import Foundation
 import UIKit
 
-public class CustomMealView: BaseUIView {
-    
-    //  MARK: Properties
+public final class CustomMealView: BaseUIView {
+    // MARK: - Properties
     public var mealThumb: UIImage = UIImage() {
         didSet {
             mealThumbImage.image = mealThumb
@@ -42,25 +41,22 @@ public class CustomMealView: BaseUIView {
         }
     }
     
-    //  MARK: UI Element
+    //  MARK: - UI Element
     private let mealThumbImage: UIImageView = {
         let image = UIImageView()
-//        image.image = Resource.Images.meatTacos
         return image
     }()
     
     private let categoryLabel: UILabel = {
         let label = UILabel()
-//        label.text = "HEALTHY"
-        label.font = UIFont(name: Resource.Font.HelveticaNeue, size: Dimension.sharedInstance.fontSize_10)
+        label.font = .helveticaNeue(fontSize: 10)
         label.textColor = Theme.sharedInstance.gray9E9E9E
         return label
     }()
     
     private let mealLabel: UILabel = {
         let label = UILabel()
-//        label.text = "Pasta Salad"
-        label.font = UIFont(name: Resource.Font.HelveticaNeue, size: Dimension.sharedInstance.fontSize_16)
+        label.font = .helveticaNeue(fontSize: 16)
         return label
     }()
     
@@ -72,8 +68,7 @@ public class CustomMealView: BaseUIView {
     
     private let idMealLabel: UILabel = {
         let label = UILabel()
-//        label.text = "52785"
-        label.font = UIFont(name: Resource.Font.HelveticaNeue, size: Dimension.sharedInstance.fontSize_13)
+        label.font = .helveticaNeue(fontSize: 13)
         label.textColor = Theme.sharedInstance.gray9E9E9E
         return label
     }()
@@ -86,13 +81,12 @@ public class CustomMealView: BaseUIView {
     
     private let areaLabel: UILabel = {
         let label = UILabel()
-//        label.text = "Italia"
-        label.font = UIFont(name: Resource.Font.HelveticaNeue, size: Dimension.sharedInstance.fontSize_13)
+        label.font = .helveticaNeue(fontSize: 13)
         label.textColor = Theme.sharedInstance.gray9E9E9E
         return label
     }()
     
-    //  MARK:   Life Cycle
+    //  MARK: - Life Cycle
     override func initialize() {
         super.initialize()
         setUpMealThumbImageImage()
@@ -104,7 +98,7 @@ public class CustomMealView: BaseUIView {
         setUpAreaLabel()
     }
     
-    //  MARK:   Set Up View
+    //  MARK: - Set Up View
     private func setUpMealThumbImageImage() {
         addSubview(mealThumbImage)
         mealThumbImage.snp.makeConstraints { (make) in

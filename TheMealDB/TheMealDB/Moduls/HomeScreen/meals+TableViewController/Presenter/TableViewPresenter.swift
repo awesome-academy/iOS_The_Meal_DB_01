@@ -9,33 +9,37 @@
 import Foundation
 import UIKit
 
+struct ConstantTableView {
+    static let numberOfItem = 2
+    static let rowHeight: CGFloat = Dimension.sharedInstance.height_232
+}
+
 protocol TableViewPresenter {
-    func register(tableView: UITableView)
     var numberOfItem: Int { get }
-    func tableView(tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     var rowHeight: CGFloat { get }
+    func register(tableView: UITableView)
+    func tableView(tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
 }
 
 public class TableViewPresenterImplement: TableViewPresenter {
-    
-    private let mang = ["ABC", "XYZ", "ABC", "XYZ", "ABC", "XYZ", "ABC", "XYZ", "ABC", "XYZ", "ABC", "XYZ"]
-    
-    func register(tableView: UITableView) {
-        let nibName = UINib(nibName: "CustomTableViewCell", bundle: nil)
-        tableView.register(nibName, forCellReuseIdentifier: "Cell")
-    }
-    
     var numberOfItem: Int {
-        return 2
-    }
-
-    func tableView(tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell") as! CustomTableViewCell
-        cell.Configuage(data: Resource.Images.meatTacos ?? UIImage())
-        return cell
+        return ConstantTableView.numberOfItem
     }
     
     var rowHeight: CGFloat {
-        return Dimension.sharedInstance.height_232
+        return ConstantTableView.rowHeight
+    }
+    
+    func register(tableView: UITableView) {
+        let nibName = UINib(nibName: "CustomTableViewCell", bundle: nil)
+        tableView.register(nibName, forCellReuseIdentifier: "CustomTableViewCell")
+    }
+
+    func tableView(tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "CustomTableViewCell") as? CustomTableViewCell else {
+            return UITableViewCell()
+        }
+        cell.Configuage(data: Resource.Images.meatTacos ?? UIImage())
+        return cell
     }
 }

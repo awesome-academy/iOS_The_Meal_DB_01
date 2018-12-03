@@ -7,9 +7,12 @@
 //
 
 import UIKit
+import Alamofire
+import ObjectMapper
 
 class CustomTableViewController: BaseViewController {
     @IBOutlet weak var tableView: UITableView!
+    
     private var presenter: TableViewPresenter?
     
     override func initialize() {

@@ -9,11 +9,10 @@
 import UIKit
 
 class CustomTableViewCell: UITableViewCell {
-    
-    //  MARK: UI Propertis
+    //  MARK: - UI Propertis
     private let mealView = CustomMealView()
     
-    //  MARK: Life Cycle
+    //  MARK: - Life Cycle
     override func awakeFromNib() {
         super.awakeFromNib()
         addSubview(mealView)
@@ -24,7 +23,7 @@ class CustomTableViewCell: UITableViewCell {
         }
     }
     
-    //  MARK: Configuage
+    //  MARK: - Configuage
     public func Configuage(data: UIImage) {
         mealView.mealThumb = data
     }

@@ -9,12 +9,11 @@
 import UIKit
 
 class HomeViewController: BaseViewController {
-
-    //  MARK: UI Element
+    //  MARK: - UI Element
     private let featuredRecipesLabel: UILabel = {
         let label = UILabel()
-        label.text = Resource.Label.featuredRecipesTitle
-        label.font = UIFont(name: Resource.Font.HelveticaNeue, size: Dimension.sharedInstance.captionFontSize_14)
+        label.text = ConstantLabel.featuredRecipesTitle
+        label.font = .helveticaNeue(fontSize: 14)
         return label
     }()
     
@@ -22,27 +21,16 @@ class HomeViewController: BaseViewController {
     
     private let lastestLabel: UILabel = {
         let label = UILabel()
-        label.text = Resource.Label.lastestTitle
-        label.font = UIFont(name: Resource.Font.HelveticaNeue, size: Dimension.sharedInstance.captionFontSize_14)
+        label.text = ConstantLabel.lastestTitle
+        label.font = .helveticaNeue(fontSize: 14)
         return label
     }()
     
     private let tableView = CustomTableViewController()
     
-    //  MARK: Life Cycle
-    override func viewWillAppear(_ animated: Bool) {
-        self.navigationController?.navigationBar.isHidden = false
-        self.navigationItem.title = Resource.Navigation.homeTitle
-        let alertButton = UIBarButtonItem(image: Resource.Images.alertButton,
-                                          style: .plain,
-                                          target: self,
-                                          action: #selector(AlertAction))
-        self.navigationItem.leftBarButtonItem = alertButton
-        let searchButton = UIBarButtonItem(image: Resource.Images.searchButton,
-                                          style: .plain,
-                                          target: self,
-                                          action: #selector(SearchAction))
-        self.navigationItem.rightBarButtonItem = searchButton
+    //  MARK: - Life Cycle
+    override func viewDidAppear(_ animated: Bool) {
+        configView()
     }
     
     override func initialize() {
@@ -53,7 +41,7 @@ class HomeViewController: BaseViewController {
         setUpTableView()
     }
     
-    //  MARK: SetUp View
+    //  MARK: - SetUp View
     private func setUpFeaturedRecipesLabel() {
         view.addSubview(featuredRecipesLabel)
         featuredRecipesLabel.snp.makeConstraints { (make) in
@@ -90,13 +78,27 @@ class HomeViewController: BaseViewController {
         }
     }
     
-    
-    //  MARK: SetUp Action
-    @objc func AlertAction() {
-        print("Alert")
+    //  MARK: - SetUp Action
+    @objc func alertAction() {
+        // MARK: TODO
     }
     
-    @objc func SearchAction() {
-        print("Search")
+    @objc func searchAction() {
+       // MARK: TODO
+    }
+    
+    private func configView() {
+        navigationController?.navigationBar.isHidden = false
+        navigationItem.title = Resource.Navigation.homeTitle
+        let alertButton = UIBarButtonItem(image: Resource.Images.alertButton,
+        style: .plain,
+        target: self,
+        action: #selector(alertAction))
+        navigationItem.leftBarButtonItem = alertButton
+        let searchButton = UIBarButtonItem(image: Resource.Images.searchButton,
+        style: .plain,
+        target: self,
+        action: #selector(searchAction))
+        navigationItem.rightBarButtonItem = searchButton
     }
 }

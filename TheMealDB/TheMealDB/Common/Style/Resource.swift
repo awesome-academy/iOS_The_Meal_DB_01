@@ -16,7 +16,7 @@ public class Resource {
         return Static.instance
     }
     
-    public class Images {
+    public struct Images {
         public static var alertButton: UIImage? = UIImage(named: "AlertButton")
         public static var searchButton: UIImage? = UIImage(named: "SearchButton")
         public static var backButton: UIImage? = UIImage(named: "BackButton")
@@ -32,19 +32,20 @@ public class Resource {
         public static var idMealImage: UIImage? = UIImage(named: "idMealImage")
     }
     
-    public class Navigation {
+    public struct Navigation {
         public static var homeTitle = "HOME"
         public static var favoritesTitle = "FAVORITES"
         public static var categoriesTitle = "CATEGORIES"
     }
-    
-    public class Label {
-        public static var featuredRecipesTitle = "FEATURED RECIPES"
-        public static var lastestTitle = "LASTEST"
-        public static var heveticalFontStype = "Hevetical Neue"
+}
+
+extension UIFont {
+    public class func helveticaNeue(fontSize: CGFloat) -> UIFont? {
+        return UIFont(name: "Helvetica Neue", size: fontSize)
     }
-    
-    public class Font {
-        public static var HelveticaNeue = "Helvetica Neue"
-    }
+}
+
+struct ConstantLabel {
+    public static var featuredRecipesTitle = "FEATURED RECIPES"
+    public static var lastestTitle = "LASTEST"
 }

@@ -10,6 +10,7 @@ import UIKit
 import CoreData
 import Alamofire
 import SnapKit
+import ObjectMapper
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

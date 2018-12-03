@@ -10,27 +10,28 @@ import Foundation
 import UIKit
 
 protocol CollectionPresenter {
-    func register(customCollec: UICollectionView)
     var numberOfItem: Int { get }
+    func register(customCollec: UICollectionView)
     func collectionView(collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
 }
 
 class CollectionPresenterImplement: CollectionPresenter {
-
-    private let Arr = Resource.Images.arrCategories
+    private let arr = Resource.Images.arrCategories
     
     func register(customCollec: UICollectionView) {
         let nibName = UINib(nibName: "CustomCollectionViewCell", bundle: nil)
-        customCollec.register(nibName, forCellWithReuseIdentifier: "Cell")
+        customCollec.register(nibName, forCellWithReuseIdentifier: "CustomCollectionViewCell")
     }
     
     var numberOfItem: Int {
-        return Arr.count
+        return arr.count
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! CustomCollectionViewCell
-        guard let itemArr = Arr[indexPath.row] else {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CustomCollectionViewCell", for: indexPath) as? CustomCollectionViewCell else {
+            return UICollectionViewCell()
+        }
+        guard let itemArr = arr[indexPath.row] else {
             return UICollectionViewCell()
         }
         cell.configure(data: itemArr)
