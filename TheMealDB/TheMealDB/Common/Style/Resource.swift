@@ -15,4 +15,36 @@ public class Resource {
         }
         return Static.instance
     }
+    
+    public class Images {
+        public static var alertButton: UIImage? = UIImage(named: "AlertButton")
+        public static var searchButton: UIImage? = UIImage(named: "SearchButton")
+        public static var backButton: UIImage? = UIImage(named: "BackButton")
+        public static var homeGray: UIImage? = UIImage(named: "home1")
+        public static var homeOrigin: UIImage? = UIImage(named: "home2")
+        public static var kindGray: UIImage? = UIImage(named: "kind1")
+        public static var kindOrigin: UIImage? = UIImage(named: "kind2")
+        public static var chocolate: UIImage? = UIImage(named: "chocolate")
+        public static var soup: UIImage? = UIImage(named: "soup")
+        public static var arrCategories = [chocolate, soup]
+        public static var meatTacos: UIImage? = UIImage(named: "meatTacos")
+        public static var areaImage: UIImage? = UIImage(named: "areaImage")
+        public static var idMealImage: UIImage? = UIImage(named: "idMealImage")
+    }
+    
+    public class Navigation {
+        public static var homeTitle = "HOME"
+        public static var favoritesTitle = "FAVORITES"
+        public static var categoriesTitle = "CATEGORIES"
+    }
+    
+    public class Label {
+        public static var featuredRecipesTitle = "FEATURED RECIPES"
+        public static var lastestTitle = "LASTEST"
+        public static var heveticalFontStype = "Hevetical Neue"
+    }
+    
+    public class Font {
+        public static var HelveticaNeue = "Helvetica Neue"
+    }
 }

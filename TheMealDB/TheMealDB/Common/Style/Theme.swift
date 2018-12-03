@@ -81,7 +81,7 @@ public class Theme {
         return #colorLiteral(red: 0.4845794439, green: 0.5440424085, blue: 0.647426188, alpha: 1)
     }
     
-    var grayTextColor: UIColor {
+    var gray9E9E9E: UIColor {
         return #colorLiteral(red: 0.6196078431, green: 0.6196078431, blue: 0.6196078431, alpha: 1)
     }
     
@@ -141,10 +141,16 @@ public class Theme {
         return #colorLiteral(red: 0.6430656314, green: 0.6431785226, blue: 0.6430584788, alpha: 1)
     }
     
+    var blackColor: UIColor {
+        return #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+    }
+    
     //  MARK:   CGColor
     var grayCGColor: CGColor {
         return #colorLiteral(red: 0.8784313725, green: 0.8784313725, blue: 0.8784313725, alpha: 1)
     }
+    
+    
     
     //  MARK:   Button Title Color
     var titleButtonColor: UIColor {
