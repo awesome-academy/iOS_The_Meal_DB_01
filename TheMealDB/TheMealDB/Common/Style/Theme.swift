@@ -18,7 +18,7 @@ public class Theme {
     
     private init() {}
     
-    //MARK: Color
+    //MARK: - Color
     public var primaryColor: UIColor {
         return #colorLiteral(red: 0, green: 0.3313085437, blue: 0.7222445011, alpha: 1)
     }
@@ -31,7 +31,7 @@ public class Theme {
         return #colorLiteral(red: 0.9631381631, green: 0.3095718622, blue: 0.3006241322, alpha: 1)
     }
     
-    //MARK: Background
+    //MARK: - Background
     var defaultBGColor: UIColor {
         return #colorLiteral(red: 0.9998916984, green: 1, blue: 0.9998808503, alpha: 1)
     }
@@ -68,7 +68,7 @@ public class Theme {
         return #colorLiteral(red: 0.9606800675, green: 0.9608443379, blue: 0.9606696963, alpha: 1)
     }
     
-    //MARK: TextColor
+    //MARK: - TextColor
     var defaultTextColor: UIColor {
         return #colorLiteral(red: 0.9998916984, green: 1, blue: 0.9998808503, alpha: 1)
     }
@@ -81,11 +81,11 @@ public class Theme {
         return #colorLiteral(red: 0.4845794439, green: 0.5440424085, blue: 0.647426188, alpha: 1)
     }
     
-    var grayTextColor: UIColor {
+    var gray9E9E9E: UIColor {
         return #colorLiteral(red: 0.6196078431, green: 0.6196078431, blue: 0.6196078431, alpha: 1)
     }
     
-    //MARK: Chart
+    //MARK: - Chart
     var diastolicChartColor: UIColor {
         return #colorLiteral(red: 0, green: 0.1668739319, blue: 1, alpha: 1)
     }
@@ -102,7 +102,7 @@ public class Theme {
         return #colorLiteral(red: 0.3037468791, green: 0.7357437015, blue: 0.9506803155, alpha: 1)
     }
     
-    //MARK: Statistic status
+    //MARK: - Statistic status
     var lowStatisticColor: UIColor {
         return #colorLiteral(red: 0.3122304678, green: 0.781267941, blue: 0.813952744, alpha: 1)
     }
@@ -119,7 +119,7 @@ public class Theme {
         return #colorLiteral(red: 0.9476038814, green: 0.2670727074, blue: 0.2843323052, alpha: 1)
     }
     
-    //MARK: Other
+    //MARK: - Other
     var lineDeviderColor: UIColor {
         return #colorLiteral(red: 0.5920904875, green: 0.5921952128, blue: 0.5920838714, alpha: 1)
     }
@@ -128,7 +128,7 @@ public class Theme {
         return #colorLiteral(red: 0.7926892638, green: 0.8293792009, blue: 0.9021757245, alpha: 1)
     }
     
-    //MARK: Message
+    //MARK: - Message
     var ownerMessageCGColor: UIColor {
         return #colorLiteral(red: 0.4608904719, green: 0.5940192342, blue: 0.8761782646, alpha: 1)
     }
@@ -141,12 +141,16 @@ public class Theme {
         return #colorLiteral(red: 0.6430656314, green: 0.6431785226, blue: 0.6430584788, alpha: 1)
     }
     
-    //  MARK:   CGColor
+    var blackColor: UIColor {
+        return #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+    }
+    
+    //  MARK: - CGColor
     var grayCGColor: CGColor {
         return #colorLiteral(red: 0.8784313725, green: 0.8784313725, blue: 0.8784313725, alpha: 1)
     }
     
-    //  MARK:   Button Title Color
+    //  MARK: - Button Title Color
     var titleButtonColor: UIColor {
         return #colorLiteral(red: 0.2, green: 0.2, blue: 0.2, alpha: 1)
     }
