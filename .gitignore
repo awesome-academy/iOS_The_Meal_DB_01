@@ -51,6 +51,8 @@ playground.xcworkspace
 AFError.swift 
 Pods
 TheMealDB/TheMealDB/Support/Assets.xcassets/
+Dimesion.swift
+Theme.swift
 
 # Carthage
 #
