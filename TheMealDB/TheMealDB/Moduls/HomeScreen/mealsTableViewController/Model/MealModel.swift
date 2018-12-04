@@ -9,7 +9,7 @@
 import Foundation
 import ObjectMapper
 
-class MealArray: Mappable {
+class MealModel: Mappable {
     var meals: [MealItem]?
     
     required init?(map: Map) {

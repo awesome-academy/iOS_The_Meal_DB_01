@@ -8,23 +8,22 @@
 
 import UIKit
 
-class CustomCollectionViewController: BaseViewController {
+class CategoriesViewController: BaseViewController {
     @IBOutlet weak var customCollectionView: UICollectionView!
-    
-    private var collectionPresenter = CollectionPresenterImplement()
+
+    private var collectionPresenter: CollectioViewPresenter!
 
     override func initialize() {
         super.initialize()
+        customCollectionView.backgroundColor = Theme.sharedInstance.placeHolderMessageColor
+        collectionPresenter = CategoriesPresenterImplement()
         customCollectionView.dataSource = self
         customCollectionView.delegate = self
         collectionPresenter.register(customCollec: customCollectionView)
-        let flowLayout = UICollectionViewFlowLayout()
-        customCollectionView.setCollectionViewLayout(flowLayout, animated: true)
-        flowLayout.scrollDirection = .horizontal
     }
 }
 
-extension CustomCollectionViewController: UICollectionViewDataSource, UICollectionViewDelegate {
+extension CategoriesViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return collectionPresenter.numberOfItem
     }
@@ -34,13 +33,21 @@ extension CustomCollectionViewController: UICollectionViewDataSource, UICollecti
         return collectionPresenter.collectionView(collectionView: customCollectionView,
                                                   cellForItemAt: indexPath)
     }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        collectionPresenter.collectionView(collectionView: customCollectionView, didSelectItemAt: indexPath)
+    }
 }
 
-extension CustomCollectionViewController: UICollectionViewDelegateFlowLayout {
+extension CategoriesViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: Dimension.sharedInstance.collectionViewCellWidth,
-                      height: Dimension.sharedInstance.collectionViewCellHeight)
+        return CGSize(width: CellSize.width,
+                      height: CellSize.height)
     }
+}
+
+struct CellSize {
+    static let width = 208
+    static let height = 100
 }

@@ -10,7 +10,7 @@ import UIKit
 import Alamofire
 import ObjectMapper
 
-class CustomTableViewController: BaseViewController {
+class MealsViewController: BaseViewController {
     @IBOutlet weak var tableView: UITableView!
     
     private var presenter: TableViewPresenter?
@@ -24,7 +24,7 @@ class CustomTableViewController: BaseViewController {
     }
 }
 
-extension CustomTableViewController: UITableViewDataSource, UITableViewDelegate {
+extension MealsViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return presenter?.numberOfItem ?? 0
     }

@@ -21,13 +21,13 @@ class TabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpTabBar()
+//        getCategroriesAPI()
     }
     
     //  MARK: - Setup Action
     func setUpTabBar() {
-        homeVC.tabBarItem = UITabBarItem(title: nil, image: Resource.Images.homeGray, selectedImage: Resource.Images.homeOrigin)
-        baseVC.tabBarItem = UITabBarItem(title: nil, image: Resource.Images.kindGray, selectedImage: Resource.Images.kindOrigin)
+        homeVC.tabBarItem = UITabBarItem(title: nil, image: Resource.Images.heartGray, selectedImage: Resource.Images.heartOrigin)
+        baseVC.tabBarItem = UITabBarItem(title: nil, image: Resource.Images.heartGray, selectedImage: Resource.Images.heartOrigin)
         viewControllers = [homeVC, baseVC]
     }
 }
-

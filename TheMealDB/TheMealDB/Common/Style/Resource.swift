@@ -30,6 +30,8 @@ public class Resource {
         public static var meatTacos: UIImage? = UIImage(named: "meatTacos")
         public static var areaImage: UIImage? = UIImage(named: "areaImage")
         public static var idMealImage: UIImage? = UIImage(named: "idMealImage")
+        public static var heartGray: UIImage? = UIImage(named: "heart1")
+        public static var heartOrigin: UIImage? = UIImage(named: "heart2")
     }
     
     public struct Navigation {

@@ -11,6 +11,7 @@ import CoreData
 import Alamofire
 import SnapKit
 import ObjectMapper
+import Kingfisher
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -22,7 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = UINavigationController(rootViewController: TabBarController())
         return true
     }
-
+    
     func applicationWillTerminate(_ application: UIApplication) {
         self.saveContext()
     }
@@ -37,7 +38,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         })
         return container
     }()
-
+    
     // MARK: - Core Data Saving support
     func saveContext () {
         let context = persistentContainer.viewContext
@@ -51,3 +52,4 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
     }
 }
+

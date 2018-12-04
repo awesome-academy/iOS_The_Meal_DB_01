@@ -12,27 +12,27 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CustomCollectionViewCell" id="gTV-IL-0wX" customClass="CustomCollectionViewCell" customModule="TheMealDB" customModuleProvider="target">
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CategoriesViewCell" id="gTV-IL-0wX" userLabel="CategoriesViewCell" customClass="CategoriesViewCell" customModule="TheMealDB" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kSF-1o-Ywf">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RFg-ej-Fbg">
                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                     </imageView>
                 </subviews>
             </view>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="kSF-1o-Ywf" secondAttribute="trailing" id="2tH-ev-M0K"/>
-                <constraint firstItem="kSF-1o-Ywf" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="cWN-iW-WV8"/>
-                <constraint firstItem="kSF-1o-Ywf" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="k2i-zF-sd1"/>
-                <constraint firstAttribute="bottom" secondItem="kSF-1o-Ywf" secondAttribute="bottom" id="vbD-XA-ie2"/>
+                <constraint firstItem="RFg-ej-Fbg" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="0Rm-i4-485"/>
+                <constraint firstAttribute="bottom" secondItem="RFg-ej-Fbg" secondAttribute="bottom" id="2jb-5e-iTe"/>
+                <constraint firstAttribute="trailing" secondItem="RFg-ej-Fbg" secondAttribute="trailing" id="G1G-VE-wnL"/>
+                <constraint firstItem="RFg-ej-Fbg" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="lcE-d7-IJa"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <connections>
-                <outlet property="imageItem" destination="kSF-1o-Ywf" id="B7B-Gs-i0Y"/>
+                <outlet property="imageItem" destination="RFg-ej-Fbg" id="SZB-c1-QAY"/>
             </connections>
         </collectionViewCell>
     </objects>

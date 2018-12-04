@@ -9,6 +9,7 @@ target 'TheMealDB' do
 
 pod ‘Alamofire’
 pod ‘SnapKit’ 
-pod 'ObjectMapper'
+pod ‘ObjectMapper’
+pod 'Kingfisher' 
 
 end

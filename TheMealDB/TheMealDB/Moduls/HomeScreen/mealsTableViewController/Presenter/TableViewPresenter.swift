@@ -31,15 +31,15 @@ public class TableViewPresenterImplement: TableViewPresenter {
     }
     
     func register(tableView: UITableView) {
-        let nibName = UINib(nibName: "CustomTableViewCell", bundle: nil)
-        tableView.register(nibName, forCellReuseIdentifier: "CustomTableViewCell")
+        let nibName = UINib(nibName: "MealCell", bundle: nil)
+        tableView.register(nibName, forCellReuseIdentifier: "MealCell")
     }
 
     func tableView(tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "CustomTableViewCell") as? CustomTableViewCell else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "MealCell", for: indexPath) as? MealCell else {
             return UITableViewCell()
         }
-        cell.Configuage(data: Resource.Images.meatTacos ?? UIImage())
+        cell.configuage(data: Resource.Images.meatTacos ?? UIImage())
         return cell
     }
 }

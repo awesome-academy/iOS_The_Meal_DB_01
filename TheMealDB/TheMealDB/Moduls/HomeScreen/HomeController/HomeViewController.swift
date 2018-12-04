@@ -17,7 +17,7 @@ class HomeViewController: BaseViewController {
         return label
     }()
     
-    private let collecView = CustomCollectionViewController()
+    private let collecView = CategoriesViewController()
     
     private let lastestLabel: UILabel = {
         let label = UILabel()
@@ -26,7 +26,7 @@ class HomeViewController: BaseViewController {
         return label
     }()
     
-    private let tableView = CustomTableViewController()
+    private let tableView = MealsViewController()
     
     //  MARK: - Life Cycle
     override func viewDidAppear(_ animated: Bool) {

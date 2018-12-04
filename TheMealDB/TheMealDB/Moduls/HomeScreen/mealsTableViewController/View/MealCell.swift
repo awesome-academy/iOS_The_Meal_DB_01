@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CustomTableViewCell: UITableViewCell {
+class MealCell: UITableViewCell {
     //  MARK: - UI Propertis
     private let mealView = CustomMealView()
     
@@ -24,7 +24,7 @@ class CustomTableViewCell: UITableViewCell {
     }
     
     //  MARK: - Configuage
-    public func Configuage(data: UIImage) {
+    public func configuage(data: UIImage) {
         mealView.mealThumb = data
     }
 }

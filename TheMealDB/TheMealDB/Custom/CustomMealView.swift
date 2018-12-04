@@ -13,7 +13,7 @@ public final class CustomMealView: BaseUIView {
     // MARK: - Properties
     public var mealThumb: UIImage = UIImage() {
         didSet {
-            mealThumbImage.image = mealThumb
+                mealThumbImage.image = Resource.Images.meatTacos
         }
     }
     

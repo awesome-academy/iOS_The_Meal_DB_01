@@ -1,20 +1,21 @@
 //
 //  CustomCollectionViewCell.swift
-//  
+//
 //
 //  Created by mac on 11/27/18.
 //
 
 import UIKit
 
-class CustomCollectionViewCell: UICollectionViewCell {
+class CategoriesViewCell: UICollectionViewCell {
     @IBOutlet weak var imageItem: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        backgroundColor = .white
     }
     
-    func configure(data: UIImage) {
-        imageItem.image = data
+    func configure(categoryItem: CategoriesItem) {
+        imageItem.kf.setImage(with: URL(string: categoryItem.strCategoryThumb))
     }
 }
