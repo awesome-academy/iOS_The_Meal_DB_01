@@ -26,7 +26,7 @@ public class Dimension {
         heightScale = UIScreen.main.bounds.height / heightIP6
     }
     
-    //MARK: FontSize
+    //MARK: - FontSize
     public var logoFontSize_36: CGFloat {
         return 36 * heightScale
     }
@@ -43,11 +43,11 @@ public class Dimension {
         return 16 * self.heightScale
     }
     
-    var captionFontSize: CGFloat {
+    var captionFontSize_14: CGFloat {
         return 14 * self.heightScale
     }
     
-    var smallCaptionFontSize: CGFloat {
+    var fontSize_13: CGFloat {
         return 13 * self.heightScale
     }
     
@@ -55,11 +55,15 @@ public class Dimension {
         return 14 * self.heightScale
     }
     
-    var messageFontSize: CGFloat {
+    var fontSize_16: CGFloat {
         return 16 * self.heightScale
     }
     
-    //MARK: Spacing
+    var fontSize_10: CGFloat {
+        return 10 * self.heightScale
+    }
+    
+    //MARK: - Spacing
     var smallHorizontalMargin: CGFloat {
         return 4 * self.widthScale
     }
@@ -72,7 +76,7 @@ public class Dimension {
         return 8 * self.widthScale
     }
     
-    var mediumVerticalMargin: CGFloat {
+    var verticalMargin_8: CGFloat {
         return 8 * self.heightScale
     }
     
@@ -88,11 +92,11 @@ public class Dimension {
         return 24 * self.widthScale
     }
     
-    var largeVerticalMargin_24: CGFloat {
+    var verticalMargin_24: CGFloat {
         return 24 * self.heightScale
     }
     
-    var largeHorizontalMargin_32: CGFloat {
+    var horizontalMargin_32: CGFloat {
         return 32 * self.widthScale
     }
     
@@ -132,6 +136,10 @@ public class Dimension {
         return 60 * self.heightScale
     }
     
+    var verticalMargin_76: CGFloat {
+        return 76 * self.heightScale
+    }
+    
     var largeHorizontalMargin_90: CGFloat {
         return 90 * self.widthScale
     }
@@ -152,11 +160,11 @@ public class Dimension {
         return 120 * self.heightScale
     }
     
-    //MARK: Button
-    var widthButton_344: CGFloat {
+    var width_344: CGFloat {
         return 344 * self.widthScale
     }
     
+    //MARK: - Button
     var defaultWidthButton: CGFloat {
         return 291 * self.widthScale
     }
@@ -201,15 +209,19 @@ public class Dimension {
         return 25 * self.heightScale
     }
     
-    var heightTitleButton_24: CGFloat {
-        return 24 * self.heightScale
-    }
-    
     var heightButton_48: CGFloat {
         return 48 * self.heightScale
     }
     
-    //MARK: Other
+    var height_24: CGFloat {
+        return 24 * self.heightScale
+    }
+    
+    var width_24: CGFloat {
+        return 24 * self.widthScale
+    }
+    
+    //MARK: - Other
     var widthImageLogo: CGFloat {
         return 94 * self.widthScale
     }
@@ -282,7 +294,7 @@ public class Dimension {
         return 363 * self.widthScale
     }
     
-    //MARK: Textfield
+    //MARK: - Textfield
     var widthTextfield_344: CGFloat {
         return 344 * self.widthScale
     }
@@ -307,7 +319,7 @@ public class Dimension {
         return 35 * self.heightScale
     }
     
-    //MARK: SIDE MENU
+    //MARK: - SIDE MENU
     var widthSideMenu: CGFloat {
         return 300 * self.widthScale
     }
@@ -328,7 +340,7 @@ public class Dimension {
         return 16 * self.heightScale
     }
     
-    //MARK: Segment
+    //MARK: - Segment
     var widthCustomSegment: CGFloat {
         return 327 * self.widthScale
     }
@@ -337,7 +349,7 @@ public class Dimension {
         return 36 * self.heightScale
     }
     
-    //MARK: Message
+    //MARK: - Message
     var widthMessage: CGFloat {
         return 265 * self.widthScale
     }
@@ -346,7 +358,7 @@ public class Dimension {
         return 10 * self.heightScale
     }
     
-    //MARK: SEARCH
+    //MARK: - SEARCH
     var heightContainsViewSearchBar: CGFloat {
         return 50 * self.heightScale
     }
@@ -355,13 +367,30 @@ public class Dimension {
         return 45 * self.heightScale
     }
     
-    //MARK: CHART
+    //MARK: - CHART
     var heightPieChart: CGFloat {
         return 311 * self.heightScale
     }
     
-    //MARK: Collection View
-    var heightItemCollectionView_128: CGFloat {
+    //MARK: - HEIGHT
+    var height_128: CGFloat {
         return 128 * self.heightScale
+    }
+    
+    var height_232: CGFloat {
+        return 232 * self.heightScale
+    }
+    
+    //  MARK: - WIDTH
+    var width_79: CGFloat {
+        return 79 * self.heightScale
+    }
+    
+    var collectionViewCellHeight: CGFloat {
+        return 100 * self.heightScale
+    }
+    
+    var collectionViewCellWidth: CGFloat {
+        return 208 * self.widthScale
     }
 }

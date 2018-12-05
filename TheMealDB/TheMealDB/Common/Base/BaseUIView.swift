@@ -14,6 +14,7 @@ public class BaseUIView: UIView, ReuseView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        initialize()
     }
     
     required public init?(coder aDecoder: NSCoder) {
