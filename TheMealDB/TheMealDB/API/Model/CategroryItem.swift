@@ -1,30 +1,20 @@
 //
-//  Model.swift
+//  CategroryItem.swift
 //  TheMealDB
 //
-//  Created by mac on 11/30/18.
+//  Created by mac on 12/17/18.
 //  Copyright © 2018 mac. All rights reserved.
 //
 
 import Foundation
 import ObjectMapper
 
-class CategorieModel: Mappable {
-    var categories: [CategoriesItem]?
-    
-    required init?(map: Map) {
-    }
-    
-    func mapping(map: Map) {
-        categories <- map["categories"]
-    }
-}
-
-class CategoriesItem: Mappable {
+class CategroryItem : Mappable {
     var strCategory = ""
     var strCategoryThumb = ""
     
-    required init?(map: Map) {
+    required init(map: Map) {
+        mapping(map: map)
     }
     
     func mapping(map: Map) {
