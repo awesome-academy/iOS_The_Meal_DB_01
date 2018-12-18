@@ -12,9 +12,13 @@ class CategoriesViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        backgroundColor = .white
     }
     
-    func configure(data: UIImage) {
-        imageItem.image = data
+    func configure(categoryItem: CategroryItem) {
+        guard let url = URL(string: categoryItem.strCategoryThumb) else {
+            return
+        }
+        imageItem.sd_setImage(with: url, completed: nil)
     }
 }
