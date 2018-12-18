@@ -13,26 +13,54 @@ import ObjectMapper
 class MealsViewController: BaseViewController {
     @IBOutlet weak var tableView: UITableView!
     
-    private var presenter: TableViewPresenter?
+    private var meals = [Meal]() {
+        didSet {
+            self.tableView.reloadData()
+        }
+    }
     
     override func initialize() {
         super.initialize()
         tableView.dataSource = self
         tableView.delegate = self
-        presenter = TableViewPresenterImplement()
-        presenter?.register(tableView: tableView)
+        initView()
+        loadData()
+    }
+    
+    private func initView() {
+        let nibName = UINib(nibName: "MealCell", bundle: nil)
+        tableView.register(nibName, forCellReuseIdentifier: "MealCell")
+    }
+    
+    private func loadData() {
+        let mealRepository: MealRepository = MealRepositoryImp(api: APIService.share)
+        mealRepository.getMeal { [weak self] result in
+            guard let `self` = self else { return }
+            switch result {
+            case .success(let meal):
+                guard let meal = meal?.meals else {
+                    return
+                }
+                self.meals = meal
+            case .failure(let error): print(error as Any)
+            }
+        }
     }
 }
 
 extension MealsViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return presenter?.numberOfItem ?? 0
+        return meals.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return presenter?.tableView(tableView: tableView, cellForRowAt: indexPath) ?? UITableViewCell()
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "MealCell", for: indexPath) as? MealCell else {
+            return UITableViewCell()
+        }
+        cell.configuage(data: meals[indexPath.row])
+        return cell
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return presenter?.rowHeight ?? 0
+        return Dimension.sharedInstance.height_232
     }
 }

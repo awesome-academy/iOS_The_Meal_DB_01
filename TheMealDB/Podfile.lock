@@ -1,24 +1,34 @@
 PODS:
   - Alamofire (4.7.0)
+  - Kingfisher (4.6.4)
   - ObjectMapper (3.1.0)
+  - SDWebImage (4.3.3):
+    - SDWebImage/Core (= 4.3.3)
+  - SDWebImage/Core (4.3.3)
   - SnapKit (4.0.0)
 
 DEPENDENCIES:
   - Alamofire
+  - Kingfisher
   - ObjectMapper
+  - SDWebImage
   - SnapKit
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - Alamofire
+    - Kingfisher
     - ObjectMapper
+    - SDWebImage
     - SnapKit
 
 SPEC CHECKSUMS:
   Alamofire: 907e0a98eb68cdb7f9d1f541a563d6ac5dc77b25
+  Kingfisher: 68498a706e46c2a050b0c9572f100e5db407f6e0
   ObjectMapper: 20505058f54e5c3ca69e1d6de9897d152a5369a6
+  SDWebImage: de4d90b5bff3571eae7bd16202b1f43135409fa5
   SnapKit: a42d492c16e80209130a3379f73596c3454b7694
 
-PODFILE CHECKSUM: 62c9b9cdffe8ccd83a3f5c6356c0aad442f5a7de
+PODFILE CHECKSUM: e5e70e3238ea2780eafba1450726ea976402b17b
 
 COCOAPODS: 1.5.0

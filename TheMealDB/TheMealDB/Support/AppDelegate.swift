@@ -11,6 +11,7 @@ import CoreData
 import Alamofire
 import SnapKit
 import ObjectMapper
+import SDWebImage
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

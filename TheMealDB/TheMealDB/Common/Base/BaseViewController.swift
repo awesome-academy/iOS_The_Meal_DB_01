@@ -14,7 +14,7 @@ protocol ReuseView {
 
 public class BaseViewController: UIViewController, ReuseView {
     public func initialize() {
-        view.backgroundColor = .white
+        view.backgroundColor = #colorLiteral(red: 0.9685322642, green: 0.9686941504, blue: 0.9685109258, alpha: 1)
     }
     
     public override func viewDidLoad() {
