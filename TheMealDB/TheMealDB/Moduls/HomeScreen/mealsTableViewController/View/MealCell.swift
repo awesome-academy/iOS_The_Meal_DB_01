@@ -19,12 +19,19 @@ class MealCell: UITableViewCell {
         mealView.snp.makeConstraints { (make) in
             make.top.left.equalToSuperview()
             make.width.equalToSuperview()
-            make.height.equalTo(232)
+            make.height.equalTo(200)
         }
     }
     
     //  MARK: - Configuage
-    public func configuage(data: UIImage) {
-        mealView.mealThumb = data
+    func configuage(data: Meal) {
+        guard let url = URL(string: data.strMealThumb) else {
+            return
+        }
+        mealView.mealThumbImage.sd_setImage(with: url, completed: nil)
+        mealView.categoryText = data.strCategory
+        mealView.mealText = data.strMeal
+        mealView.idMealText = data.idMeal
+        mealView.areaText = data.strArea
     }
 }

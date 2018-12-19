@@ -10,13 +10,7 @@ import Foundation
 import UIKit
 
 public final class CustomMealView: BaseUIView {
-    // MARK: - Properties
-    public var mealThumb: UIImage = UIImage() {
-        didSet {
-                mealThumbImage.image = Resource.Images.meatTacos
-        }
-    }
-    
+    // MARK: - Properties 
     public var categoryText: String = String() {
         didSet {
             categoryLabel.text = categoryText
@@ -42,7 +36,7 @@ public final class CustomMealView: BaseUIView {
     }
     
     //  MARK: - UI Element
-    private let mealThumbImage: UIImageView = {
+    var mealThumbImage: UIImageView = {
         let image = UIImageView()
         return image
     }()

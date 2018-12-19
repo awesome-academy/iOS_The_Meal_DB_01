@@ -58,6 +58,7 @@ extension CategoriesViewController: UICollectionViewDataSource, UICollectionView
             return UICollectionViewCell()
         }
         cell.configure(categoryItem: categoryArray[indexPath.row])
+        
         return cell
     }
     
