@@ -11,7 +11,7 @@ import UIKit
 class TabBarController: UITabBarController {
     //  MARK: - Properties
     private let homeVC = HomeViewController()
-    private let baseVC = BaseViewController()
+    private let categroryVC = CategoryController()
     
     //  MARK: - Life Cycle
     override func viewWillAppear(_ animated: Bool) {
@@ -26,7 +26,7 @@ class TabBarController: UITabBarController {
     //  MARK: - Setup Action
     func setUpTabBar() {
         homeVC.tabBarItem = UITabBarItem(title: nil, image: Resource.Images.heartGray, selectedImage: Resource.Images.heartOrigin)
-        baseVC.tabBarItem = UITabBarItem(title: nil, image: Resource.Images.heartGray, selectedImage: Resource.Images.heartOrigin)
-        viewControllers = [homeVC, baseVC]
+        categroryVC.tabBarItem = UITabBarItem(title: nil, image: Resource.Images.heartGray, selectedImage: Resource.Images.heartOrigin)
+        viewControllers = [homeVC, categroryVC]
     }
 }
