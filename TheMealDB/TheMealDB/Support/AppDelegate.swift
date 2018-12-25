@@ -21,6 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
         window?.rootViewController = TabBarController()
+        UITabBar.appearance().backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         return true
     }
     
@@ -52,4 +53,3 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
     }
 }
-

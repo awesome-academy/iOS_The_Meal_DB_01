@@ -8,7 +8,11 @@
 
 import UIKit
 
-class CategoryController: BaseViewController {
+private struct ConfigCollectionCell {
+    static let height = Dimension.sharedInstance.heightCategroryCell
+}
+
+class CategoryController: UIViewController {
     //  MARK: - UI Element
     @IBOutlet weak private var collectionView: UICollectionView!
     
@@ -80,7 +84,7 @@ class CategoryController: BaseViewController {
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationItem.title = Resource.Navigation.categoriesTitle
-        let searchBarButton = UIBarButtonItem(image: Resource.Images.searchButton,
+        let searchBarButton = UIBarButtonItem(image: Resource.Images.searchImage,
                                               style: .plain,
                                               target: self, action: #selector(setUpSearchBar))
         self.navigationItem.rightBarButtonItem = searchBarButton
@@ -101,7 +105,8 @@ extension CategoryController: UISearchBarDelegate {
             filterCategories = categories
             return
         }
-        filterCategories = categories.filter { category -> Bool in
+        filterCategories = categories
+            .filter { category -> Bool in
             guard let text = searchBar.text else {
                 return false
             }
@@ -112,6 +117,7 @@ extension CategoryController: UISearchBarDelegate {
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         self.navigationItem.titleView = nil
         filterCategories = categories
+        searchBar.text = ""
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
@@ -135,10 +141,6 @@ extension CategoryController: UICollectionViewDataSource, UICollectionViewDelega
 
 extension CategoryController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.frame.size.width/2 - 5, height: SizeForCell.height)
+        return CGSize(width: collectionView.frame.size.width / 2 - 5, height: ConfigCollectionCell.height)
     }
-}
-
-private struct SizeForCell {
-    static let height = Dimension.sharedInstance.heightCategroryCell
 }

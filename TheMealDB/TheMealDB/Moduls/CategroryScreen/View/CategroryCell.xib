@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="AvenirNext.ttc">
+            <string>AvenirNext-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CategroryCell" id="Eau-JL-2eE" customClass="CategroryCell" customModule="TheMealDB" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="meatTacos" translatesAutoresizingMaskIntoConstraints="NO" id="L1N-Xm-duf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
+                    </imageView>
+                    <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UDE-XX-BH8">
+                        <rect key="frame" x="0.0" y="105" width="281.5" height="45"/>
+                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="1AD-0a-ssN">
+                            <rect key="frame" x="0.0" y="0.0" width="281.5" height="45"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kf5-sB-nJ9">
+                                    <rect key="frame" x="30" y="0.0" width="251.5" height="45"/>
+                                    <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="12"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="Kf5-sB-nJ9" firstAttribute="top" secondItem="1AD-0a-ssN" secondAttribute="top" id="B9w-Q8-o2k"/>
+                                <constraint firstAttribute="bottom" secondItem="Kf5-sB-nJ9" secondAttribute="bottom" id="Epz-hb-jYa"/>
+                                <constraint firstItem="Kf5-sB-nJ9" firstAttribute="leading" secondItem="1AD-0a-ssN" secondAttribute="leading" constant="30" id="Q00-Zg-Pa1"/>
+                                <constraint firstAttribute="trailing" secondItem="Kf5-sB-nJ9" secondAttribute="trailing" id="Soe-eR-L4x"/>
+                            </constraints>
+                        </view>
+                        <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <blurEffect style="light"/>
+                    </visualEffectView>
+                    <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zr5-Dv-yEB">
+                        <rect key="frame" x="312.5" y="19" width="43.5" height="43.5"/>
+                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="y1X-CX-WDY">
+                            <rect key="frame" x="0.0" y="0.0" width="43.5" height="43.5"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RID-jf-Qqv">
+                                    <rect key="frame" x="0.0" y="0.0" width="43.5" height="43.5"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                    <color key="textColor" red="0.88942736389999999" green="0.28640946750000001" blue="0.4307668805" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="RID-jf-Qqv" secondAttribute="bottom" id="0Y3-lR-5EY"/>
+                                <constraint firstAttribute="trailing" secondItem="RID-jf-Qqv" secondAttribute="trailing" id="Za3-0T-9Hg"/>
+                                <constraint firstItem="RID-jf-Qqv" firstAttribute="top" secondItem="y1X-CX-WDY" secondAttribute="top" id="cXA-Q5-MkW"/>
+                                <constraint firstItem="RID-jf-Qqv" firstAttribute="leading" secondItem="y1X-CX-WDY" secondAttribute="leading" id="jmb-aD-f2f"/>
+                            </constraints>
+                        </view>
+                        <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="Zr5-Dv-yEB" secondAttribute="height" multiplier="1/1" id="bnl-ep-0VY"/>
+                        </constraints>
+                        <blurEffect style="light"/>
+                    </visualEffectView>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="UDE-XX-BH8" secondAttribute="bottom" id="AXz-a6-N3D"/>
+                <constraint firstItem="UDE-XX-BH8" firstAttribute="width" secondItem="Eau-JL-2eE" secondAttribute="width" multiplier="3/4" id="CyG-bT-kvE"/>
+                <constraint firstItem="Zr5-Dv-yEB" firstAttribute="top" secondItem="Eau-JL-2eE" secondAttribute="top" constant="19" id="EEU-ii-Hgz"/>
+                <constraint firstItem="UDE-XX-BH8" firstAttribute="leading" secondItem="Eau-JL-2eE" secondAttribute="leading" id="FtX-1D-dZv"/>
+                <constraint firstAttribute="bottom" secondItem="L1N-Xm-duf" secondAttribute="bottom" id="QLU-m7-Cjp"/>
+                <constraint firstItem="UDE-XX-BH8" firstAttribute="height" secondItem="Eau-JL-2eE" secondAttribute="height" multiplier="3/10" id="T5F-Oh-x2Y"/>
+                <constraint firstAttribute="trailing" secondItem="Zr5-Dv-yEB" secondAttribute="trailing" constant="19" id="YtF-7o-lcE"/>
+                <constraint firstItem="L1N-Xm-duf" firstAttribute="leading" secondItem="Eau-JL-2eE" secondAttribute="leading" id="b2V-tc-h1R"/>
+                <constraint firstItem="Zr5-Dv-yEB" firstAttribute="height" secondItem="Eau-JL-2eE" secondAttribute="height" multiplier="100/343" id="cHH-Fp-BgY"/>
+                <constraint firstItem="L1N-Xm-duf" firstAttribute="top" secondItem="Eau-JL-2eE" secondAttribute="top" id="hVW-0F-RYi"/>
+                <constraint firstAttribute="trailing" secondItem="L1N-Xm-duf" secondAttribute="trailing" id="l1w-JP-9sM"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="AnV-jM-bCO"/>
+            <size key="customSize" width="380" height="157"/>
+            <connections>
+                <outlet property="blurCategroryIDView" destination="Zr5-Dv-yEB" id="7XB-eU-sWD"/>
+                <outlet property="blurCategroryNameView" destination="UDE-XX-BH8" id="qXy-EG-oS1"/>
+                <outlet property="categoryIDLabel" destination="RID-jf-Qqv" id="ElT-ve-b30"/>
+                <outlet property="categoryImage" destination="L1N-Xm-duf" id="ioo-Dt-Ktu"/>
+                <outlet property="categroryNameLabel" destination="Kf5-sB-nJ9" id="elE-e9-R4C"/>
+            </connections>
+            <point key="canvasLocation" x="-152.5" y="-215"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="meatTacos" width="344" height="128"/>
+    </resources>
+</document>

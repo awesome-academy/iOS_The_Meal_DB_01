@@ -16,16 +16,15 @@ class TabBarController: UITabBarController {
     //  MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        setUpTabBar()
+        setupTabBar()
     }
     
-    //  MARK: - Setup Action
-    func setUpTabBar() {
-        homeVC.tabBarItem = UITabBarItem(title: nil, image: Resource.Images.homeGrey, selectedImage: Resource.Images.homeOrange)
+    //  MARK: - Setup View
+    private func setupTabBar() {
+        homeVC.tabBarItem = UITabBarItem(title: nil, image: Resource.Images.homeGrey?.withRenderingMode(.alwaysOriginal), selectedImage: Resource.Images.homeOrange?.withRenderingMode(.alwaysOriginal))
         let navigationHomeController = UINavigationController(rootViewController: homeVC)
-        categroryVC.tabBarItem = UITabBarItem(title: nil, image: Resource.Images.kindGrey, selectedImage: Resource.Images.kindOrange)
+        categroryVC.tabBarItem = UITabBarItem(title: nil, image: Resource.Images.kindGrey?.withRenderingMode(.alwaysOriginal), selectedImage: Resource.Images.kindOrange?.withRenderingMode(.alwaysOriginal))
         let navigationCategoryController = UINavigationController(rootViewController: categroryVC)
         viewControllers = [navigationHomeController, navigationCategoryController]
     }
 }
-

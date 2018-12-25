@@ -12,6 +12,7 @@ import ObjectMapper
 class CategroryItem : Mappable {
     var strCategory = ""
     var strCategoryThumb = ""
+    var idCategory = ""
     
     required init(map: Map) {
         mapping(map: map)
@@ -20,5 +21,6 @@ class CategroryItem : Mappable {
     func mapping(map: Map) {
         strCategory <- map["strCategory"]
         strCategoryThumb <- map["strCategoryThumb"]
+        idCategory <- map["idCategory"]
     }
 }

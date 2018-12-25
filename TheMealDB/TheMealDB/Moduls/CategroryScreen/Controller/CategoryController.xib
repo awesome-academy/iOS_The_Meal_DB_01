@@ -22,9 +22,12 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BackgroundImage" translatesAutoresizingMaskIntoConstraints="NO" id="3Kk-8f-7f1">
+                    <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                </imageView>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="QWq-MF-ZHH">
-                    <rect key="frame" x="20.5" y="64" width="334" height="520"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <rect key="frame" x="20" y="64" width="334" height="520"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="vOI-Nq-33N">
                         <size key="itemSize" width="50" height="50"/>
                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -35,12 +38,19 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="3Kk-8f-7f1" secondAttribute="bottom" id="48v-Hl-vQf"/>
                 <constraint firstItem="QWq-MF-ZHH" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="334/375" id="674-Q3-gCC"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="3Kk-8f-7f1" secondAttribute="trailing" id="6sg-0N-GbZ"/>
                 <constraint firstItem="QWq-MF-ZHH" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="44" id="Esk-6V-gv1"/>
+                <constraint firstItem="3Kk-8f-7f1" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="RgM-6E-OuO"/>
                 <constraint firstItem="QWq-MF-ZHH" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Wu2-j8-5qU"/>
                 <constraint firstItem="QWq-MF-ZHH" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="520/667" id="XBU-UQ-lSb"/>
+                <constraint firstItem="3Kk-8f-7f1" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="avn-XE-T4U"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
         </view>
     </objects>
+    <resources>
+        <image name="BackgroundImage" width="375" height="667"/>
+    </resources>
 </document>

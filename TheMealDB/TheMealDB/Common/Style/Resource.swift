@@ -17,24 +17,23 @@ public class Resource {
     }
     
     public struct Images {
-        public static var alertButton: UIImage? = UIImage(named: "alertButton")
-        public static var searchButton: UIImage? = UIImage(named: "searchButton")
-        public static var backButton: UIImage? = UIImage(named: "backButton")
-        public static var homeGrey: UIImage? = UIImage(named: "homegrey")
-        public static var homeOrange: UIImage? = UIImage(named: "homeorange")
-        public static var kindGrey: UIImage? = UIImage(named: "kindgrey")
-        public static var kindOrange: UIImage? = UIImage(named: "kindorange")
-        public static var chocolate: UIImage? = UIImage(named: "chocolate")
-        public static var soup: UIImage? = UIImage(named: "soup")
-        public static var arrCategories = [chocolate, soup]
-        public static var meatTacos: UIImage? = UIImage(named: "meatTacos")
-        public static var areaImage: UIImage? = UIImage(named: "areaImage")
-        public static var idMealImage: UIImage? = UIImage(named: "idMealImage")
-        public static var favoriteblack: UIImage? = UIImage(named: "favoriteblack")
-        public static var favoritewhite: UIImage? = UIImage(named: "favoritewhite")
-        public static var heartGrey: UIImage? = UIImage(named: "heartGrey")
-        public static var heartOrange: UIImage? = UIImage(named: "heartOrange")
-        public static var noImage: UIImage? = UIImage(named: "noImage")
+        public static var alertImage = UIImage(named: "AlertButton") ?? UIImage(named: "noImage")
+        public static var searchImage = UIImage(named: "SearchButton") ?? UIImage(named: "noImage")
+        public static var backButton = UIImage(named: "BackButton") ?? UIImage(named: "noImage")
+        public static var homeGrey = UIImage(named: "homegrey") ?? UIImage(named: "noImage")
+        public static var homeOrange = UIImage(named: "homeorange") ?? UIImage(named: "noImage")
+        public static var kindGrey = UIImage(named: "kindgrey") ?? UIImage(named: "noImage")
+        public static var kindOrange = UIImage(named: "kindorange") ?? UIImage(named: "noImage")
+        public static var chocolate = UIImage(named: "chocolate") ?? UIImage(named: "noImage")
+        public static var soup = UIImage(named: "soup") ?? UIImage(named: "noImage")
+        public static var arrCategories = [chocolate, soup] 
+        public static var meatTacos = UIImage(named: "meatTacos") ?? UIImage(named: "noImage")
+        public static var areaImage = UIImage(named: "areaImage") ?? UIImage(named: "noImage")
+        public static var idMealImage = UIImage(named: "idMealImage") ?? UIImage(named: "noImage")
+        public static var heartGray = UIImage(named: "heart1") ?? UIImage(named: "noImage")
+        public static var heartOrigin = UIImage(named: "heart2") ?? UIImage(named: "noImage")
+        public static var favoriteWhite = UIImage(named: "favoriteWhite") ?? UIImage(named: "noImage")
+        public static var favoriteRed = UIImage(named: "favoriteRed") ?? UIImage(named: "noImage")
     }
     
     public struct Navigation {
@@ -52,7 +51,7 @@ extension UIFont {
 }
 
 struct ConstantLabel {
-    public static var featuredRecipesTitle = "FEATURED RECIPES"
-    public static var lastestTitle = "LASTEST"
+    public static var categoryTitle = "CATEGORY"
+    public static var mealTitle = "MEAL"
 }
 
