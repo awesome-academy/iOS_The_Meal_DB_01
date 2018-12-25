@@ -77,6 +77,6 @@ extension CategoriesViewController: UICollectionViewDelegateFlowLayout {
 }
 
 struct CellSize {
-    static let width = 208
-    static let height = 100
+    static let width = Dimension.sharedInstance.width_208
+    static let height = Dimension.sharedInstance.height_100
 }

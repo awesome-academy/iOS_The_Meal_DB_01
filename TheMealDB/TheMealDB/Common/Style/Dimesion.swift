@@ -381,6 +381,10 @@ public class Dimension {
         return 232 * self.heightScale
     }
     
+    var height_100: CGFloat {
+        return 100 * self.heightScale
+    }
+    
     //  MARK: - WIDTH
     var width_79: CGFloat {
         return 79 * self.heightScale
@@ -392,5 +396,9 @@ public class Dimension {
     
     var collectionViewCellWidth: CGFloat {
         return 208 * self.widthScale
+    }
+    
+    var width_208: CGFloat {
+        return 208 * self.heightScale
     }
 }
