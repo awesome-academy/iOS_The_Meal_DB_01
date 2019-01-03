@@ -141,6 +141,10 @@ public class Theme {
         return #colorLiteral(red: 0.6430656314, green: 0.6431785226, blue: 0.6430584788, alpha: 1)
     }
     
+    var mainColor: UIColor {
+        return #colorLiteral(red: 0.9685322642, green: 0.9686941504, blue: 0.9685109258, alpha: 1)
+    }
+    
     var blackColor: UIColor {
         return #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
     }
@@ -155,3 +159,4 @@ public class Theme {
         return #colorLiteral(red: 0.2, green: 0.2, blue: 0.2, alpha: 1)
     }
 }
+

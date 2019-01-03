@@ -42,7 +42,11 @@ class MealsViewController: BaseViewController {
                     return
                 }
                 self.meals = meal
-            case .failure(let error): print(error as Any)
+            case .failure(let error):
+                let alertController = UIAlertController(title: "Error", message: error?.errorMessage, preferredStyle: .alert)
+                let okAlertButton = UIAlertAction(title: "OK", style: .default, handler: nil)
+                alertController.addAction(okAlertButton)
+                self.present(alertController, animated: true, completion: nil)
             }
         }
     }

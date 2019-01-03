@@ -38,6 +38,8 @@ public final class CustomMealView: BaseUIView {
     //  MARK: - UI Element
     var mealThumbImage: UIImageView = {
         let image = UIImageView()
+        image.contentMode = .scaleAspectFill
+        image.clipsToBounds = true
         return image
     }()
     

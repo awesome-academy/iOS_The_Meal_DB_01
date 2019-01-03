@@ -12,7 +12,7 @@ class TabBarController: UITabBarController {
     //  MARK: - Properties
     private let homeVC = HomeViewController()
     private let categroryVC = CategoryController()
-  
+    
     //  MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,8 +21,11 @@ class TabBarController: UITabBarController {
     
     //  MARK: - Setup Action
     func setUpTabBar() {
-        homeVC.tabBarItem = UITabBarItem(title: nil, image: Resource.Images.heartGray, selectedImage: Resource.Images.heartOrigin)
-        categroryVC.tabBarItem = UITabBarItem(title: nil, image: Resource.Images.heartGray, selectedImage: Resource.Images.heartOrigin)
-        viewControllers = [homeVC, categroryVC]
+        homeVC.tabBarItem = UITabBarItem(title: nil, image: Resource.Images.homeGrey, selectedImage: Resource.Images.homeOrange)
+        let navigationHomeController = UINavigationController(rootViewController: homeVC)
+        categroryVC.tabBarItem = UITabBarItem(title: nil, image: Resource.Images.kindGrey, selectedImage: Resource.Images.kindOrange)
+        let navigationCategoryController = UINavigationController(rootViewController: categroryVC)
+        viewControllers = [navigationHomeController, navigationCategoryController]
     }
 }
+
