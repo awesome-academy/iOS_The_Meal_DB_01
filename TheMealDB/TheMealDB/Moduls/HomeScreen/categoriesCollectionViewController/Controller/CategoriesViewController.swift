@@ -9,19 +9,17 @@
 import UIKit
 
 class CategoriesViewController: BaseViewController {
-    @IBOutlet weak var customCollectionView: UICollectionView!
-
+    @IBOutlet weak private var customCollectionView: UICollectionView!
+    
     private var categoryArray = [CategroryItem]() {
         didSet {
             self.customCollectionView.reloadData()
         }
     }
- 
+    
     override func initialize() {
         super.initialize()
-        customCollectionView.backgroundColor = Theme.sharedInstance.placeHolderMessageColor
-        customCollectionView.dataSource = self
-        customCollectionView.delegate = self
+        customCollectionView.backgroundColor = .clear
         register()
         loadData()
     }
@@ -36,14 +34,20 @@ class CategoriesViewController: BaseViewController {
                     return
                 }
                 self.categoryArray = category
-            case .failure(let error): print(error as Any)
+            case .failure(let error):
+                let alertController = UIAlertController(title: "Error", message: error?.errorMessage, preferredStyle: .alert)
+                let okAlertButton = UIAlertAction(title: "OK", style: .default, handler: nil)
+                alertController.addAction(okAlertButton)
+                self.present(alertController, animated: true, completion: nil)
             }
         }
     }
     
     private func register() {
-        let nibName = UINib(nibName: "CategoriesViewCell", bundle: nil)
-        customCollectionView.register(nibName, forCellWithReuseIdentifier: "CategoriesViewCell")
+        let nibName = UINib(nibName: "CategroryCell", bundle: nil)
+        customCollectionView.register(nibName, forCellWithReuseIdentifier: "CategroryCell")
+        customCollectionView.dataSource = self
+        customCollectionView.delegate = self
     }
 }
 
@@ -52,18 +56,12 @@ extension CategoriesViewController: UICollectionViewDataSource, UICollectionView
         return categoryArray.count
     }
     
-    func collectionView(_ collectionView: UICollectionView,
-                        cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CategoriesViewCell", for: indexPath) as? CategoriesViewCell else {
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CategroryCell", for: indexPath) as? CategroryCell else {
             return UICollectionViewCell()
         }
-        cell.configure(categoryItem: categoryArray[indexPath.row])
-        
+        cell.configuage(data: categoryArray[indexPath.row])
         return cell
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        // MARK: - TODO
     }
 }
 
@@ -77,6 +75,6 @@ extension CategoriesViewController: UICollectionViewDelegateFlowLayout {
 }
 
 struct CellSize {
-    static let width = Dimension.sharedInstance.width_208
-    static let height = Dimension.sharedInstance.height_100
+    static let width = Dimension.sharedInstance.collectionViewCellWidth
+    static let height = Dimension.sharedInstance.collectionViewCellHeight
 }

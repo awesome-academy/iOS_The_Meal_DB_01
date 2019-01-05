@@ -8,14 +8,23 @@
 
 import UIKit
 
-class CategroryCell: UITableViewCell {
+final class CategroryCell: UICollectionViewCell {
     @IBOutlet weak var categroryName: UILabel!
+    @IBOutlet weak var categoryImage: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        setupView()
+    }
+    
+    private func setupView() {
+        layer.cornerRadius = 5
     }
     
     func configuage(data: CategroryItem) {
         categroryName.text = data.strCategory
+        categroryName.font = .helveticaNeue(fontSize: 15)
+        let url = URL(string: data.strCategoryThumb)
+        categoryImage.sd_setImage(with: url, completed: nil)
     }
 }
