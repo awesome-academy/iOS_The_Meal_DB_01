@@ -13,8 +13,8 @@ class CategoryController: BaseViewController {
     @IBOutlet weak private var collectionView: UICollectionView!
     
     //  MARK: - Properties
-    private var categories = [CategroryItem]()
-    private var filterCategories = [CategroryItem]() {
+    private var categories = [Categrory]()
+    private var filterCategories = [Categrory]() {
         didSet {
             self.collectionView.reloadData()
         }

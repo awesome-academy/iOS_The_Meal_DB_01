@@ -76,11 +76,11 @@ public class Dimension {
         return 8 * self.widthScale
     }
     
-    var verticalMargin_8: CGFloat {
+    var mediumVerticalMargin: CGFloat {
         return 8 * self.heightScale
     }
     
-    var horizontalMargin_16: CGFloat {
+    var normalHorizontalMargin: CGFloat {
         return 16 * self.widthScale
     }
     
@@ -92,11 +92,11 @@ public class Dimension {
         return 24 * self.widthScale
     }
     
-    var verticalMargin_24: CGFloat {
+    var largeVerticalMargin: CGFloat {
         return 24 * self.heightScale
     }
     
-    var horizontalMargin_32: CGFloat {
+    var largeHorizontalMargin: CGFloat {
         return 32 * self.widthScale
     }
     
@@ -136,7 +136,7 @@ public class Dimension {
         return 60 * self.heightScale
     }
     
-    var verticalMargin_76: CGFloat {
+    var largeverticalMargin: CGFloat {
         return 76 * self.heightScale
     }
     
@@ -156,8 +156,8 @@ public class Dimension {
         return 108 * self.heightScale
     }
     
-    var largeVerticalMargin_120: CGFloat {
-        return 120 * self.heightScale
+    var veryLargeVerticalMargin: CGFloat {
+        return 136 * self.heightScale
     }
     
     var width_344: CGFloat {
@@ -213,12 +213,16 @@ public class Dimension {
         return 48 * self.heightScale
     }
     
-    var height_24: CGFloat {
+    var heightCategoryLabel: CGFloat {
         return 24 * self.heightScale
     }
     
-    var width_24: CGFloat {
+    var widthIDMealImage: CGFloat {
         return 24 * self.widthScale
+    }
+    
+    var heightIDMealImage: CGFloat {
+        return 24 * self.heightScale
     }
     
     //MARK: - Other
@@ -373,12 +377,20 @@ public class Dimension {
     }
     
     //MARK: - HEIGHT
-    var height_128: CGFloat {
+    var heightMealThumbImage: CGFloat {
         return 128 * self.heightScale
     }
     
-    var height_232: CGFloat {
+    var heightCollectionView: CGFloat {
+        return 128 * self.heightScale
+    }
+    
+    var heightTableViewCell: CGFloat {
         return 232 * self.heightScale
+    }
+    
+    var heightCollectionViewHeader: CGFloat {
+        return 272 * self.heightScale
     }
     
     var heightIngredientsCell: CGFloat {
@@ -390,6 +402,10 @@ public class Dimension {
     }
     
     var heightMealCell: CGFloat {
+        return 232 * self.heightScale
+    }
+    
+    var heightCollectionViewCell: CGFloat {
         return 232 * self.heightScale
     }
     
@@ -405,5 +421,8 @@ public class Dimension {
     var collectionViewCellWidth: CGFloat {
         return 208 * self.widthScale
     }
+    
+    var widthCollectionViewCell: CGFloat {
+        return 208 * self.heightScale
+    }
 }
-

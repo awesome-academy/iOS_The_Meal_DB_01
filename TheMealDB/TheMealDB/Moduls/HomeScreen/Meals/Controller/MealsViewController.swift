@@ -70,8 +70,8 @@ extension MealsViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let aMealViewController = AMealViewController()
-        aMealViewController.meal = meals[indexPath.row]
-        present(aMealViewController, animated: true, completion: nil)
+//        let aMealViewController = AMealViewController()
+//        aMealViewController.meal = meals[indexPath.row]
+//        present(aMealViewController, animated: true, completion: nil)
     }
 }

@@ -11,7 +11,7 @@ import UIKit
 class CategoriesViewController: BaseViewController {
     @IBOutlet weak private var customCollectionView: UICollectionView!
     
-    private var categoryArray = [CategroryItem]() {
+    private var categoryArray = [Categrory]() {
         didSet {
             self.customCollectionView.reloadData()
         }
