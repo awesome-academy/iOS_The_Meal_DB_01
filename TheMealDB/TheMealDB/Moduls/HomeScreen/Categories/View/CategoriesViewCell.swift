@@ -15,7 +15,7 @@ class CategoriesViewCell: UICollectionViewCell {
         backgroundColor = .white
     }
     
-    func configure(categoryItem: CategroryItem) {
+    func configure(categoryItem: Categrory) {
         guard let url = URL(string: categoryItem.strCategoryThumb) else {
             return
         }

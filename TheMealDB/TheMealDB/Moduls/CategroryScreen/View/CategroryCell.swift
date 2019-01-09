@@ -21,7 +21,7 @@ final class CategroryCell: UICollectionViewCell {
         layer.cornerRadius = 5
     }
     
-    func configuage(data: CategroryItem) {
+    func configuage(data: Categrory) {
         categroryName.text = data.strCategory
         categroryName.font = .helveticaNeue(fontSize: 15)
         let url = URL(string: data.strCategoryThumb)
