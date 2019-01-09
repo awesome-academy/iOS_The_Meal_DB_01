@@ -11,7 +11,7 @@ import ObjectMapper
 
 class CategroryArray : Mappable {
     
-    var categories = [CategroryItem]()
+    var categories = [Categrory]()
     
     required init(map: Map) {
         mapping(map: map)

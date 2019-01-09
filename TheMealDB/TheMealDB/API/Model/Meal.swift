@@ -22,6 +22,16 @@ class Meal : Mappable {
         mapping(map: map)
     }
     
+    init() {
+        self.idMeal = ""
+        self.strMeal = ""
+        self.strArea = ""
+        self.strCategory = ""
+        self.strInstructions = ""
+        self.strMealThumb = ""
+        self.resources = [FoodResource]()
+    }
+    
     func mapping(map: Map) {
         idMeal <- map["idMeal"]
         strMeal <- map["strMeal"]

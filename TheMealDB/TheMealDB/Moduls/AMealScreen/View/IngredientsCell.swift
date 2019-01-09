@@ -8,15 +8,15 @@
 
 import UIKit
 
-class IngredientsCell: UITableViewCell {
-    @IBOutlet weak var foodResource: UILabel!
+final class IngredientsCell: UICollectionViewCell {
+    @IBOutlet weak private var foodResource: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
     }
     
-    func configuage(data: String) {
-        foodResource.text = data
-        foodResource.font = .helveticaNeue(fontSize: 14)
+    func configuage(data: FoodResource) {
+        foodResource.text = data.ingredient + data.measure
+        foodResource.font = .helveticaNeue(fontSize: 17)
     }
 }

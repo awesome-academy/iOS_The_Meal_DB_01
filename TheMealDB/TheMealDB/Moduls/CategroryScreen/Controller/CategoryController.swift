@@ -13,8 +13,8 @@ class CategoryController: BaseViewController {
     @IBOutlet weak private var collectionView: UICollectionView!
     
     //  MARK: - Properties
-    private var categories = [CategroryItem]()
-    private var filterCategories = [CategroryItem]() {
+    private var categories = [Categrory]()
+    private var filterCategories = [Categrory]() {
         didSet {
             self.collectionView.reloadData()
         }
@@ -135,6 +135,7 @@ extension CategoryController: UICollectionViewDataSource, UICollectionViewDelega
 
 extension CategoryController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
         return CGSize(width: collectionView.frame.size.width/2 - 5, height: SizeForCell.height)
     }
 }

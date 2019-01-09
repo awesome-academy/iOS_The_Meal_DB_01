@@ -9,7 +9,7 @@
 import UIKit
 
 final class CategroryCell: UICollectionViewCell {
-    @IBOutlet weak var categroryName: UILabel!
+    @IBOutlet weak var categroryNameLabel: UILabel!
     @IBOutlet weak var categoryImage: UIImageView!
     
     override func awakeFromNib() {
@@ -21,9 +21,9 @@ final class CategroryCell: UICollectionViewCell {
         layer.cornerRadius = 5
     }
     
-    func configuage(data: CategroryItem) {
-        categroryName.text = data.strCategory
-        categroryName.font = .helveticaNeue(fontSize: 15)
+    func configuage(data: Categrory) {
+        categroryNameLabel.text = data.strCategory
+        categroryNameLabel.font = .helveticaNeue(fontSize: 15)
         let url = URL(string: data.strCategoryThumb)
         categoryImage.sd_setImage(with: url, completed: nil)
     }

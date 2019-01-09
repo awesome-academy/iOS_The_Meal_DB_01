@@ -8,72 +8,104 @@
 
 import UIKit
 
-struct ConstantsIdentifier {
+struct ConfigureCell {
     static let identifier = "IngredientsCell"
+    static let height = Dimension.sharedInstance.heightIngredientsCell
+    static let headerNibName = "HeaderAMealScreen"
+    static let minimumLineSpacingForSection: CGFloat = 5
 }
 
-class AMealViewController: BaseViewController {
+struct ConfigureHeaderCell {
+    static let headerNibName = "HeaderAMealScreen"
+}
+
+final class AMealViewController: BaseViewController {
     //  MARK: - UI Element
-    @IBOutlet private weak var foodImage: UIImageView!
-    @IBOutlet private weak var categoryLabel: UILabel!
-    @IBOutlet private weak var nameLabel: UILabel!
-    @IBOutlet private weak var idLabel: UILabel!
-    @IBOutlet private weak var areaLabel: UILabel!
-    @IBOutlet private weak var tableView: UITableView!
-    @IBOutlet private weak var textView: UITextView!
+    @IBOutlet weak private var aMealCollectionView: UICollectionView!
     
     //  MARK: - Properties
-    var meal: Meal?
     var ingredients = [FoodResource]()
-    
-    //  MARK: - Life Cycle
-    override func viewWillAppear(_ animated: Bool) {
-        navigationController?.navigationBar.isHidden = true
-        configView()
+    var meal = Meal()
+    {
+        didSet {
+            self.ingredients = meal.resources
+        }
     }
     
+    //  MARK: - Life Cycle    
     override func initialize() {
         super.initialize()
-        initTableView()
-    }
-
-    //  MARK: - Setup Action
-    @IBAction func BackButton(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
-    }
-    private func initTableView() {
-        tableView.dataSource = self
-        tableView.delegate = self
-        let nibName = UINib(nibName: ConstantsIdentifier.identifier, bundle: nil)
-        tableView.register(nibName, forCellReuseIdentifier: ConstantsIdentifier.identifier)
+        initCollectionView()
+        setUpNavigationBar()
     }
     
-    private func configView() {
-        let urlFood = URL(string: meal?.strMealThumb ?? "")
-        foodImage.sd_setImage(with: urlFood, completed: nil)
-        categoryLabel.text = meal?.strCategory
-        categoryLabel.font = .helveticaNeue(fontSize: 10)
-        categoryLabel.textColor = Theme.sharedInstance.gray9E9E9E
-        nameLabel.text = meal?.strMeal
-        nameLabel.font = .helveticaNeue(fontSize: 20)
-        idLabel.text = meal?.idMeal
-        areaLabel.text = meal?.strArea
-        textView.text = meal?.strInstructions
-        ingredients = meal?.resources ?? [FoodResource]()
+    //  MARK: - Setup Action
+    private func initCollectionView() {
+        aMealCollectionView.dataSource = self
+        aMealCollectionView.delegate = self
+        let nibName = UINib(nibName: ConfigureCell.identifier, bundle: nil)
+        aMealCollectionView.register(nibName, forCellWithReuseIdentifier: ConfigureCell.identifier)
+        let headerNibName = UINib(nibName: ConfigureCell.headerNibName, bundle: nil)
+        aMealCollectionView.register(headerNibName, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: ConfigureCell.headerNibName)
+    }
+    
+    private func setUpNavigationBar() {
+        let backBarButton = UIBarButtonItem(image: Resource.Images.backButton,
+                                            style: .plain,
+                                            target: self,
+                                            action: #selector(backToPrevious))
+        self.navigationItem.leftBarButtonItem = backBarButton
+    }
+    
+    @objc func backToPrevious() {
+        dismiss(animated: true, completion: nil)
     }
 }
 
-extension AMealViewController: UITableViewDataSource, UITableViewDelegate {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+extension AMealViewController: UICollectionViewDataSource, UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView,
+                        numberOfItemsInSection section: Int) -> Int {
         return ingredients.count
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: ConstantsIdentifier.identifier) as? IngredientsCell else {
-            return UITableViewCell()
+    func collectionView(_ collectionView: UICollectionView,
+                        cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ConfigureCell.identifier, for: indexPath) as? IngredientsCell else {
+            return UICollectionViewCell()
         }
-        let data = "\(ingredients[indexPath.row].measure) \(ingredients[indexPath.row].ingredient)"
-        cell.configuage(data: data)
+        cell.configuage(data: ingredients[indexPath.row])
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return ConfigureCell.minimumLineSpacingForSection
+    }
+    
+    func collectionView(_ collectionView: UICollectionView,
+                        viewForSupplementaryElementOfKind kind: String,
+                        at indexPath: IndexPath) -> UICollectionReusableView {
+        guard let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind,
+                                                                           withReuseIdentifier: ConfigureCell.headerNibName,
+                                                                           for: indexPath) as? HeaderAMealScreen else {
+            return UICollectionReusableView()
+        }
+        header.configure(data: meal)
+        return header
+    }
+}
+
+extension AMealViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: collectionView.frame.size.width, height: ConfigureCell.height)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        referenceSizeForHeaderInSection section: Int) -> CGSize {
+        return CGSize(width: collectionView.frame.size.width, height: collectionView.frame.size.height)
     }
 }
