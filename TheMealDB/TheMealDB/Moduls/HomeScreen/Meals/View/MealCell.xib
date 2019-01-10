@@ -6,21 +6,93 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MealCell" id="KGk-i7-Jjw" userLabel="MealCell" customClass="MealCell" customModule="TheMealDB" customModuleProvider="target">
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MealCell" id="pd7-7t-tmW" customClass="MealCell" customModule="TheMealDB" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="344" height="232"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="344" height="231.5"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                <rect key="frame" x="0.0" y="0.0" width="344" height="232"/>
                 <autoresizingMask key="autoresizingMask"/>
-            </tableViewCellContentView>
-            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
-            <point key="canvasLocation" x="37" y="-42"/>
-        </tableViewCell>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="meatTacos" translatesAutoresizingMaskIntoConstraints="NO" id="kDR-ez-Gow">
+                        <rect key="frame" x="0.0" y="0.0" width="344" height="232"/>
+                    </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kVk-WS-3lG">
+                        <rect key="frame" x="0.0" y="182" width="344" height="50"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="a9E-0e-K0N">
+                                <rect key="frame" x="16" y="0.0" width="328" height="50"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kn0-pr-4Ke">
+                                        <rect key="frame" x="0.0" y="0.0" width="328" height="24.5"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="10"/>
+                                        <color key="textColor" red="0.61960784313725492" green="0.61960784313725492" blue="0.61960784313725492" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EP1-rN-ZWa">
+                                        <rect key="frame" x="0.0" y="25.5" width="328" height="24.5"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                        <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="EP1-rN-ZWa" secondAttribute="trailing" id="Z1K-mf-H44"/>
+                                    <constraint firstAttribute="trailing" secondItem="kn0-pr-4Ke" secondAttribute="trailing" id="re2-Ib-Ery"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="a9E-0e-K0N" secondAttribute="bottom" id="EpZ-xN-Uxy"/>
+                            <constraint firstItem="a9E-0e-K0N" firstAttribute="top" secondItem="kVk-WS-3lG" secondAttribute="top" id="HWM-eL-efh"/>
+                            <constraint firstItem="a9E-0e-K0N" firstAttribute="leading" secondItem="kVk-WS-3lG" secondAttribute="leading" multiplier="16" constant="16" id="Ip8-CI-xN1"/>
+                            <constraint firstAttribute="trailing" secondItem="a9E-0e-K0N" secondAttribute="trailing" id="RFd-To-7uU"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b3U-Wc-dDa">
+                        <rect key="frame" x="25.5" y="230" width="293" height="2"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.5" colorSpace="calibratedWhite"/>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="kVk-WS-3lG" secondAttribute="trailing" id="4eY-Un-pb8"/>
+                <constraint firstItem="kDR-ez-Gow" firstAttribute="leading" secondItem="pd7-7t-tmW" secondAttribute="leading" id="4fq-lE-QQq"/>
+                <constraint firstItem="b3U-Wc-dDa" firstAttribute="centerX" secondItem="pd7-7t-tmW" secondAttribute="centerX" id="6DR-UV-3Gm"/>
+                <constraint firstItem="kVk-WS-3lG" firstAttribute="height" secondItem="pd7-7t-tmW" secondAttribute="height" multiplier="50/232" id="A4E-0F-oAR"/>
+                <constraint firstItem="b3U-Wc-dDa" firstAttribute="width" secondItem="pd7-7t-tmW" secondAttribute="width" multiplier="200/235" id="Nyb-OC-1Ug"/>
+                <constraint firstAttribute="bottom" secondItem="kDR-ez-Gow" secondAttribute="bottom" id="QEE-bx-WKN"/>
+                <constraint firstAttribute="trailing" secondItem="kDR-ez-Gow" secondAttribute="trailing" id="VaZ-ZQ-ILg"/>
+                <constraint firstAttribute="bottom" secondItem="kVk-WS-3lG" secondAttribute="bottom" id="Xlp-iP-pNC"/>
+                <constraint firstItem="kDR-ez-Gow" firstAttribute="top" secondItem="pd7-7t-tmW" secondAttribute="top" id="hGG-Ol-6AY"/>
+                <constraint firstItem="kVk-WS-3lG" firstAttribute="leading" secondItem="pd7-7t-tmW" secondAttribute="leading" id="i7c-GU-nJO"/>
+                <constraint firstItem="b3U-Wc-dDa" firstAttribute="height" secondItem="pd7-7t-tmW" secondAttribute="height" multiplier="2/235" id="nZU-n5-ShN"/>
+                <constraint firstAttribute="bottom" secondItem="b3U-Wc-dDa" secondAttribute="bottom" id="xsF-Du-26S"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="SEg-cv-YSW"/>
+            <connections>
+                <outlet property="categoryNameLabel" destination="kn0-pr-4Ke" id="NeP-qw-WGi"/>
+                <outlet property="mealImage" destination="kDR-ez-Gow" id="kfs-qS-COq"/>
+                <outlet property="mealNameLabel" destination="EP1-rN-ZWa" id="ItA-Uf-ogr"/>
+            </connections>
+            <point key="canvasLocation" x="-99" y="318"/>
+        </collectionViewCell>
     </objects>
+    <resources>
+        <image name="meatTacos" width="344" height="128"/>
+    </resources>
 </document>
