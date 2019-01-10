@@ -8,22 +8,34 @@
 
 import UIKit
 
-class CategoriesViewController: BaseViewController {
-    @IBOutlet weak private var customCollectionView: UICollectionView!
+private struct ConfigCollectionCell {
+    static let width = Dimension.sharedInstance.collectionViewCellWidth
+    static let height = Dimension.sharedInstance.collectionViewCellHeight
+    static let minimumLineSpacingForSection: CGFloat = 16
+    static let nibName = "CategroryCell"
+}
+
+class CategoriesCollectionView: UICollectionView {
+    //  MARK: - Properties
+    private var categoryArray = [Categrory]()
+    private var meals = [Meal]()
+    weak var customDelegate: CustomCollectionViewDelegate?
     
-    private var categoryArray = [Categrory]() {
-        didSet {
-            self.customCollectionView.reloadData()
-        }
-    }
-    
-    override func initialize() {
-        super.initialize()
-        customCollectionView.backgroundColor = .clear
-        register()
+    //  MARK: - Setup View
+    override func draw(_ rect: CGRect) {
+        initCollectionView()
         loadData()
+        self.backgroundColor = .clear
     }
     
+    private func initCollectionView() {
+        let nibName = UINib(nibName: ConfigCollectionCell.nibName, bundle: nil)
+        self.register(nibName, forCellWithReuseIdentifier: ConfigCollectionCell.nibName)
+        self.dataSource = self
+        self.delegate = self
+    }
+    
+    //  MARK: - Data
     private func loadData() {
         let categoryRepository: CategoryRepository = CategoryRepositoryImp(api: APIService.share)
         categoryRepository.getCategory { [weak self] result in
@@ -35,23 +47,37 @@ class CategoriesViewController: BaseViewController {
                 }
                 self.categoryArray = category
             case .failure(let error):
-                let alertController = UIAlertController(title: "Error", message: error?.errorMessage, preferredStyle: .alert)
-                let okAlertButton = UIAlertAction(title: "OK", style: .default, handler: nil)
-                alertController.addAction(okAlertButton)
-                self.present(alertController, animated: true, completion: nil)
+                guard let error = error else {
+                    return
+                }
+                self.showErrorAlert(error: error)
+            }
+        }
+        let mealRepository: MealRepository = MealRepositoryImp(api: APIService.share)
+        mealRepository.getMeal { [weak self] result in
+            guard let `self` = self else { return }
+            switch result {
+            case .success(let meal):
+                guard let meal = meal?.meals else {
+                    return
+                }
+                self.meals = meal
+            case .failure(let error):
+                guard let error = error else {
+                    return
+                }
+                self.showErrorAlert(error: error)
             }
         }
     }
     
-    private func register() {
-        let nibName = UINib(nibName: "CategroryCell", bundle: nil)
-        customCollectionView.register(nibName, forCellWithReuseIdentifier: "CategroryCell")
-        customCollectionView.dataSource = self
-        customCollectionView.delegate = self
+    //  MARK: - Action
+    private func showErrorAlert(error: BaseError) {
+        self.customDelegate?.showAlert(error: error)
     }
 }
 
-extension CategoriesViewController: UICollectionViewDataSource, UICollectionViewDelegate {
+extension CategoriesCollectionView: UICollectionViewDataSource, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return categoryArray.count
     }
@@ -65,16 +91,11 @@ extension CategoriesViewController: UICollectionViewDataSource, UICollectionView
     }
 }
 
-extension CategoriesViewController: UICollectionViewDelegateFlowLayout {
+extension CategoriesCollectionView: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: CellSize.width,
-                      height: CellSize.height)
+        return CGSize(width: ConfigCollectionCell.width,
+                      height: ConfigCollectionCell.height)
     }
-}
-
-struct CellSize {
-    static let width = Dimension.sharedInstance.collectionViewCellWidth
-    static let height = Dimension.sharedInstance.collectionViewCellHeight
 }
