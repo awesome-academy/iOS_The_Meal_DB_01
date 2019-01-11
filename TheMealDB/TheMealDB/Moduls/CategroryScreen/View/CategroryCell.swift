@@ -9,22 +9,15 @@
 import UIKit
 
 final class CategroryCell: UICollectionViewCell {
-    @IBOutlet weak var categroryName: UILabel!
-    @IBOutlet weak var categoryImage: UIImageView!
+    @IBOutlet weak private var categoryImage: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        setupView()
+        layer.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        layer.borderWidth = 1
     }
     
-    private func setupView() {
-        layer.cornerRadius = 5
-    }
-    
-    func configuage(data: Categrory) {
-        categroryName.text = data.strCategory
-        categroryName.font = .helveticaNeue(fontSize: 15)
-        let url = URL(string: data.strCategoryThumb)
-        categoryImage.sd_setImage(with: url, completed: nil)
+    func configuage(data: UIImage) {
+        categoryImage.image = data
     }
 }
