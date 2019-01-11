@@ -16,11 +16,10 @@
 		044829BF21AE46C000AD2CAD /* BaseUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044829BD21AE46C000AD2CAD /* BaseUIView.swift */; };
 		045964EF21C790A9005BF5C2 /* CategroryArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045964EE21C790A8005BF5C2 /* CategroryArray.swift */; };
 		048E093121C8A24900A453AC /* CategoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048E092F21C8A24900A453AC /* CategoryController.swift */; };
-		04B0759221E7859D00AE1BC5 /* MealCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B0759021E7859D00AE1BC5 /* MealCell.swift */; };
-		04B0759321E7859D00AE1BC5 /* MealCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04B0759121E7859D00AE1BC5 /* MealCell.xib */; };
-		04B0759621E785B100AE1BC5 /* CategroryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B0759421E785B000AE1BC5 /* CategroryCell.swift */; };
-		04B0759721E785B100AE1BC5 /* CategroryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04B0759521E785B000AE1BC5 /* CategroryCell.xib */; };
-		04BC302621DDC05700FD60A0 /* CategoryController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04BC302521DDC05700FD60A0 /* CategoryController.xib */; };
+
+		048E093521C8A35700A453AC /* CategroryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048E093321C8A35700A453AC /* CategroryCell.swift */; };
+		04BC302421DDC03100FD60A0 /* CategroryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04BC302321DDC03100FD60A0 /* CategroryCell.xib */; };
+
 		04D07EFE21B6B2D200FFCA54 /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D07EFB21B6B2D200FFCA54 /* Resource.swift */; };
 		04D07EFF21B6B2D200FFCA54 /* Dimesion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D07EFC21B6B2D200FFCA54 /* Dimesion.swift */; };
 		04D07F0021B6B2D200FFCA54 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D07EFD21B6B2D200FFCA54 /* Theme.swift */; };
@@ -32,7 +31,8 @@
 		04D07F2321B6B32000FFCA54 /* CategoriesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04D07F1421B6B32000FFCA54 /* CategoriesViewController.xib */; };
 		04D07F2A21B6B32B00FFCA54 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D07F2921B6B32B00FFCA54 /* TabBarController.swift */; };
 		04D07F2D21B6C32200FFCA54 /* CategoriesViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D07F2B21B6C32200FFCA54 /* CategoriesViewCell.swift */; };
-		04D07F2E21B6C32200FFCA54 /* CategoriesViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04D07F2C21B6C32200FFCA54 /* CategoriesViewCell.xib */; };
+		04E2CFE121E83B530005C643 /* CategoryCellSecond.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04E2CFE021E83B530005C643 /* CategoryCellSecond.xib */; };
+		04E2CFE321E83B800005C643 /* CategoryController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04E2CFE221E83B7F0005C643 /* CategoryController.xib */; };
 		04E972FE21C742CE00E8E746 /* BaseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E972F121C742CE00E8E746 /* BaseError.swift */; };
 		04E972FF21C742CE00E8E746 /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E972F221C742CE00E8E746 /* ErrorResponse.swift */; };
 		04E9730121C742CE00E8E746 /* BaseRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E972F721C742CE00E8E746 /* BaseRequest.swift */; };
@@ -66,11 +66,10 @@
 		044829BD21AE46C000AD2CAD /* BaseUIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseUIView.swift; sourceTree = "<group>"; };
 		045964EE21C790A8005BF5C2 /* CategroryArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategroryArray.swift; sourceTree = "<group>"; };
 		048E092F21C8A24900A453AC /* CategoryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryController.swift; sourceTree = "<group>"; };
-		04B0759021E7859D00AE1BC5 /* MealCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealCell.swift; sourceTree = "<group>"; };
-		04B0759121E7859D00AE1BC5 /* MealCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MealCell.xib; sourceTree = "<group>"; };
-		04B0759421E785B000AE1BC5 /* CategroryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategroryCell.swift; sourceTree = "<group>"; };
-		04B0759521E785B000AE1BC5 /* CategroryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategroryCell.xib; sourceTree = "<group>"; };
-		04BC302521DDC05700FD60A0 /* CategoryController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategoryController.xib; sourceTree = "<group>"; };
+
+		048E093321C8A35700A453AC /* CategroryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategroryCell.swift; sourceTree = "<group>"; };
+		04BC302321DDC03100FD60A0 /* CategroryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CategroryCell.xib; path = ../../../../../../FoodProjectTest/iOS_The_Meal_DB_01/TheMealDB/TheMealDB/Moduls/CategroryScreen/View/CategroryCell.xib; sourceTree = "<group>"; };
+
 		04D07EFB21B6B2D200FFCA54 /* Resource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
 		04D07EFC21B6B2D200FFCA54 /* Dimesion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dimesion.swift; sourceTree = "<group>"; };
 		04D07EFD21B6B2D200FFCA54 /* Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
@@ -82,7 +81,8 @@
 		04D07F1421B6B32000FFCA54 /* CategoriesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategoriesViewController.xib; sourceTree = "<group>"; };
 		04D07F2921B6B32B00FFCA54 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		04D07F2B21B6C32200FFCA54 /* CategoriesViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewCell.swift; sourceTree = "<group>"; };
-		04D07F2C21B6C32200FFCA54 /* CategoriesViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoriesViewCell.xib; sourceTree = "<group>"; };
+		04E2CFE021E83B530005C643 /* CategoryCellSecond.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategoryCellSecond.xib; sourceTree = "<group>"; };
+		04E2CFE221E83B7F0005C643 /* CategoryController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategoryController.xib; sourceTree = "<group>"; };
 		04E972F121C742CE00E8E746 /* BaseError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseError.swift; sourceTree = "<group>"; };
 		04E972F221C742CE00E8E746 /* ErrorResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorResponse.swift; sourceTree = "<group>"; };
 		04E972F721C742CE00E8E746 /* BaseRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseRequest.swift; sourceTree = "<group>"; };
@@ -232,7 +232,7 @@
 			isa = PBXGroup;
 			children = (
 				048E092F21C8A24900A453AC /* CategoryController.swift */,
-				04BC302521DDC05700FD60A0 /* CategoryController.xib */,
+				04E2CFE221E83B7F0005C643 /* CategoryController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -303,7 +303,7 @@
 			isa = PBXGroup;
 			children = (
 				04D07F2B21B6C32200FFCA54 /* CategoriesViewCell.swift */,
-				04D07F2C21B6C32200FFCA54 /* CategoriesViewCell.xib */,
+				04E2CFE021E83B530005C643 /* CategoryCellSecond.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -494,11 +494,13 @@
 				04278DC921ACFAE4007CB3F0 /* LaunchScreen.storyboard in Resources */,
 				04EE439321E49FF200AF1703 /* HeaderCell.xib in Resources */,
 				04278DC621ACFAE4007CB3F0 /* Assets.xcassets in Resources */,
-				04D07F2E21B6C32200FFCA54 /* CategoriesViewCell.xib in Resources */,
-				04BC302621DDC05700FD60A0 /* CategoryController.xib in Resources */,
+
+				04D07F2121B6B32000FFCA54 /* MealCell.xib in Resources */,
+				04BC302421DDC03100FD60A0 /* CategroryCell.xib in Resources */,
 				04D07F2321B6B32000FFCA54 /* CategoriesViewController.xib in Resources */,
-				04B0759721E785B100AE1BC5 /* CategroryCell.xib in Resources */,
-				04B0759321E7859D00AE1BC5 /* MealCell.xib in Resources */,
+				04E2CFE121E83B530005C643 /* CategoryCellSecond.xib in Resources */,
+				04E2CFE321E83B800005C643 /* CategoryController.xib in Resources */,
+
 				04D07F1D21B6B32000FFCA54 /* MealsViewController.xib in Resources */,
 				04EE438E21E49F8300AF1703 /* AllMealOfCategrory.xib in Resources */,
 				042DE5B121E781E60043AD75 /* HomeViewController.xib in Resources */,
