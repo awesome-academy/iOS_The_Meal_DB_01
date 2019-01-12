@@ -26,7 +26,6 @@
 		04D07F0321B6B2E400FFCA54 /* CustomMealView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D07F0221B6B2E400FFCA54 /* CustomMealView.swift */; };
 		04D07F0521B6B31600FFCA54 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D07F0421B6B31600FFCA54 /* HomeViewController.swift */; };
 		04D07F1C21B6B32000FFCA54 /* MealsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D07F0821B6B32000FFCA54 /* MealsViewController.swift */; };
-		04D07F1D21B6B32000FFCA54 /* MealsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04D07F0921B6B32000FFCA54 /* MealsViewController.xib */; };
 		04D07F2221B6B32000FFCA54 /* CategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D07F1321B6B32000FFCA54 /* CategoriesViewController.swift */; };
 		04D07F2321B6B32000FFCA54 /* CategoriesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04D07F1421B6B32000FFCA54 /* CategoriesViewController.xib */; };
 		04D07F2A21B6B32B00FFCA54 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D07F2921B6B32B00FFCA54 /* TabBarController.swift */; };
@@ -76,7 +75,6 @@
 		04D07F0221B6B2E400FFCA54 /* CustomMealView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomMealView.swift; sourceTree = "<group>"; };
 		04D07F0421B6B31600FFCA54 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		04D07F0821B6B32000FFCA54 /* MealsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealsViewController.swift; sourceTree = "<group>"; };
-		04D07F0921B6B32000FFCA54 /* MealsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MealsViewController.xib; sourceTree = "<group>"; };
 		04D07F1321B6B32000FFCA54 /* CategoriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoriesViewController.swift; sourceTree = "<group>"; };
 		04D07F1421B6B32000FFCA54 /* CategoriesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategoriesViewController.xib; sourceTree = "<group>"; };
 		04D07F2921B6B32B00FFCA54 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
@@ -267,7 +265,6 @@
 			isa = PBXGroup;
 			children = (
 				04D07F0821B6B32000FFCA54 /* MealsViewController.swift */,
-				04D07F0921B6B32000FFCA54 /* MealsViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -498,10 +495,8 @@
 				04D07F2121B6B32000FFCA54 /* MealCell.xib in Resources */,
 				04BC302421DDC03100FD60A0 /* CategroryCell.xib in Resources */,
 				04D07F2321B6B32000FFCA54 /* CategoriesViewController.xib in Resources */,
-				04E2CFE121E83B530005C643 /* CategoryCellSecond.xib in Resources */,
-				04E2CFE321E83B800005C643 /* CategoryController.xib in Resources */,
-
-				04D07F1D21B6B32000FFCA54 /* MealsViewController.xib in Resources */,
+				04B0759721E785B100AE1BC5 /* CategroryCell.xib in Resources */,
+				04B0759321E7859D00AE1BC5 /* MealCell.xib in Resources */,
 				04EE438E21E49F8300AF1703 /* AllMealOfCategrory.xib in Resources */,
 				042DE5B121E781E60043AD75 /* HomeViewController.xib in Resources */,
 			);
