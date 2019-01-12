@@ -46,7 +46,7 @@ class MealsViewController: BaseViewController {
                 let alertController = UIAlertController(title: "Error", message: error?.errorMessage, preferredStyle: .alert)
                 let okAlertButton = UIAlertAction(title: "OK", style: .default, handler: nil)
                 alertController.addAction(okAlertButton)
-                self.present(alertController, animated: true, completion: nil)
+                present(alertController, animated: true, completion: nil)
             }
         }
     }
@@ -56,7 +56,7 @@ extension MealsViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return meals.count
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "MealCell", for: indexPath) as? MealCell else {
             return UITableViewCell()
@@ -64,14 +64,14 @@ extension MealsViewController: UITableViewDataSource, UITableViewDelegate {
         cell.configuage(data: meals[indexPath.row])
         return cell
     }
-    
+
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return Dimension.sharedInstance.height_232
     }
-    
+
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        let aMealViewController = AMealViewController()
-//        aMealViewController.meal = meals[indexPath.row]
-//        present(aMealViewController, animated: true, completion: nil)
+        let aMealViewController = AMealViewController()
+        aMealViewController.meal = meals[indexPath.row]
+        present(aMealViewController, animated: true, completion: nil)
     }
 }

@@ -30,4 +30,3 @@ class Categrory : Mappable {
         idCategory <- map["idCategory"]
     }
 }
-

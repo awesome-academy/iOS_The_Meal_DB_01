@@ -16,16 +16,16 @@ class HomeViewController: BaseViewController {
         label.font = .helveticaNeue(fontSize: 14)
         return label
     }()
-    
+
     private let collecView = CategoriesViewController()
-    
+
     private let lastestLabel: UILabel = {
         let label = UILabel()
         label.text = ConstantLabel.lastestTitle
         label.font = .helveticaNeue(fontSize: 14)
         return label
     }()
-    
+
     private let tableView = MealsViewController()
     
     //  MARK: - Life Cycle
@@ -49,7 +49,7 @@ class HomeViewController: BaseViewController {
             make.left.equalToSuperview().offset(Dimension.sharedInstance.horizontalMargin_16)
         }
     }
-    
+
     private func setUpCollectionView() {
         view.addSubview(collecView.view)
         collecView.view.snp.makeConstraints { (make) in
@@ -59,7 +59,7 @@ class HomeViewController: BaseViewController {
             make.height.equalTo(Dimension.sharedInstance.height_128)
         }
     }
-    
+
     private func setUpLastestLabel() {
         view.addSubview(lastestLabel)
         lastestLabel.snp.makeConstraints { (make) in
@@ -67,7 +67,7 @@ class HomeViewController: BaseViewController {
             make.left.equalTo(featuredRecipesLabel)
         }
     }
-    
+
     private func setUpTableView() {
         view.addSubview(tableView.view)
         tableView.view.snp.makeConstraints { (make) in
@@ -77,16 +77,16 @@ class HomeViewController: BaseViewController {
             make.bottom.equalToSuperview()
         }
     }
-    
+
     //  MARK: - SetUp Action
     @objc func alertAction() {
         // MARK: TODO
     }
-    
+
     @objc func searchAction() {
        // MARK: TODO
     }
-    
+
     private func configView() {
         navigationController?.navigationBar.isHidden = false
         navigationItem.title = Resource.Navigation.homeTitle

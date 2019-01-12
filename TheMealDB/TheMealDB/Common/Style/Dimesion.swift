@@ -385,10 +385,6 @@ public class Dimension {
         return 128 * self.heightScale
     }
     
-    var heightTableViewCell: CGFloat {
-        return 232 * self.heightScale
-    }
-    
     var heightCollectionViewHeader: CGFloat {
         return 272 * self.heightScale
     }
@@ -397,15 +393,19 @@ public class Dimension {
         return 25 * self.heightScale
     }
     
-    var heightCategroryCell: CGFloat {
-        return 150 * self.heightScale
+    var heightCategroryCellSecond: CGFloat {
+        return 56 * self.heightScale
+    }
+    
+    var widthCategroryCellSecond: CGFloat {
+        return 344 * self.widthScale
     }
     
     var heightMealCell: CGFloat {
-        return 232 * self.heightScale
+        return 232.5 * self.heightScale
     }
     
-    var heightCollectionViewCell: CGFloat {
+    var heightTableViewCell: CGFloat {
         return 232 * self.heightScale
     }
     
@@ -415,7 +415,7 @@ public class Dimension {
     }
     
     var collectionViewCellHeight: CGFloat {
-        return 127 * self.heightScale
+        return 128 * self.heightScale
     }
     
     var collectionViewCellWidth: CGFloat {

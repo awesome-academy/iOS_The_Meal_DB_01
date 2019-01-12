@@ -93,7 +93,7 @@ public final class CustomMealView: BaseUIView {
         setUpAreaImage()
         setUpAreaLabel()
     }
-    
+
     //  MARK: - Set Up View
     private func setUpMealThumbImageImage() {
         addSubview(mealThumbImage)
@@ -103,7 +103,7 @@ public final class CustomMealView: BaseUIView {
             make.height.equalTo(Dimension.sharedInstance.height_128)
         }
     }
-    
+
     private func setUpCategoryLabel() {
         addSubview(categoryLabel)
         categoryLabel.snp.makeConstraints { (make) in
@@ -112,7 +112,7 @@ public final class CustomMealView: BaseUIView {
             make.height.equalTo(Dimension.sharedInstance.height_24)
         }
     }
-    
+
     private func setUpMealLabel() {
         addSubview(mealLabel)
         mealLabel.snp.makeConstraints { (make) in
@@ -120,7 +120,7 @@ public final class CustomMealView: BaseUIView {
             make.left.height.equalTo(categoryLabel)
         }
     }
-    
+
     private func setUpIDMealImage() {
         addSubview(idMealImage)
         idMealImage.snp.makeConstraints { (make) in
@@ -130,7 +130,7 @@ public final class CustomMealView: BaseUIView {
             make.height.equalTo(Dimension.sharedInstance.height_24)
         }
     }
-    
+
     private func setUpIDMealLabel() {
         addSubview(idMealLabel)
         idMealLabel.snp.makeConstraints { (make) in
@@ -139,7 +139,7 @@ public final class CustomMealView: BaseUIView {
             make.height.equalTo(idMealImage)
         }
     }
-    
+
     private func setUpAreaImage() {
         addSubview(areaImage)
         areaImage.snp.makeConstraints { (make) in
@@ -148,7 +148,7 @@ public final class CustomMealView: BaseUIView {
             make.width.height.equalTo(idMealImage)
         }
     }
-    
+
     private func setUpAreaLabel() {
         addSubview(areaLabel)
         areaLabel.snp.makeConstraints { (make) in
@@ -158,3 +158,4 @@ public final class CustomMealView: BaseUIView {
         }
     }
 }
+

@@ -23,8 +23,8 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="QWq-MF-ZHH">
-                    <rect key="frame" x="15" y="50" width="344" height="587"/>
-                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <rect key="frame" x="0.5" y="61.5" width="375" height="560.5"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="vOI-Nq-33N">
                         <size key="itemSize" width="50" height="50"/>
                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -35,10 +35,10 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="QWq-MF-ZHH" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="30" id="8dD-86-1jI"/>
-                <constraint firstItem="QWq-MF-ZHH" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Nsv-eS-tRx"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="QWq-MF-ZHH" secondAttribute="bottom" constant="30" id="lWG-uV-12G"/>
-                <constraint firstItem="QWq-MF-ZHH" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="344/375" id="ozl-bc-qVk"/>
+                <constraint firstItem="QWq-MF-ZHH" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="AhN-HD-h3Z"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="QWq-MF-ZHH" secondAttribute="bottom" constant="45" id="ECU-Tl-F2h"/>
+                <constraint firstItem="QWq-MF-ZHH" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" multiplier="60/667" constant="60" id="h1o-VZ-2Pf"/>
+                <constraint firstItem="QWq-MF-ZHH" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="uAi-YP-2WD"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
         </view>
