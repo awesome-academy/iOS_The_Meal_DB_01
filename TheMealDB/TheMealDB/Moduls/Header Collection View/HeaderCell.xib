@@ -20,7 +20,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="375" height="272"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SfX-2y-YM8">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="noImage" translatesAutoresizingMaskIntoConstraints="NO" id="SfX-2y-YM8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="192"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CATEGRORY" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ETc-yK-54W">
@@ -31,8 +31,8 @@
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Categrory Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eoT-jA-fXS">
                         <rect key="frame" x="15.5" y="240" width="344" height="32"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                        <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
@@ -55,9 +55,12 @@
             <size key="customSize" width="461" height="309"/>
             <connections>
                 <outlet property="categoryImage" destination="SfX-2y-YM8" id="qOP-NP-cpk"/>
-                <outlet property="categoryName" destination="eoT-jA-fXS" id="pga-oP-nZD"/>
+                <outlet property="categoryNameLabel" destination="eoT-jA-fXS" id="oLP-7K-jyT"/>
             </connections>
             <point key="canvasLocation" x="-101.5" y="-37.5"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <image name="noImage" width="343" height="245"/>
+    </resources>
 </document>
