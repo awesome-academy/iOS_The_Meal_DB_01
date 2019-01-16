@@ -13,4 +13,12 @@ class MealCell: UICollectionViewCell {
     @IBOutlet weak private var mealImage: UIImageView!
     @IBOutlet weak private var categoryNameLabel: UILabel!
     @IBOutlet weak private var mealNameLabel: UILabel!
+    
+    //  MARK: - Configuage
+    func configuage(data: Meal) {
+        let url = URL(string: data.strMealThumb)
+        mealImage.sd_setImage(with: url, placeholderImage: #imageLiteral(resourceName: "noImage"))
+        categoryNameLabel.text = data.strCategory
+        mealNameLabel.text = data.strMeal
+    }
 }
