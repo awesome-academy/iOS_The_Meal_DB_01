@@ -19,10 +19,9 @@ objects = {
 		044829BF21AE46C000AD2CAD /* BaseUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044829BD21AE46C000AD2CAD /* BaseUIView.swift */; };
 		045964EF21C790A9005BF5C2 /* CategroryArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045964EE21C790A8005BF5C2 /* CategroryArray.swift */; };
 		048E093121C8A24900A453AC /* CategoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048E092F21C8A24900A453AC /* CategoryController.swift */; };
-
-		048E093521C8A35700A453AC /* CategroryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048E093321C8A35700A453AC /* CategroryCell.swift */; };
+		04B5748021EFE3AD00BD3D39 /* AMealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B5747F21EFE3AD00BD3D39 /* AMealViewController.swift */; };
+		04B5748421EFE3C500BD3D39 /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B5748321EFE3C500BD3D39 /* DBManager.swift */; };
 		04BC302421DDC03100FD60A0 /* CategroryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04BC302321DDC03100FD60A0 /* CategroryCell.xib */; };
-
 		04D07EFE21B6B2D200FFCA54 /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D07EFB21B6B2D200FFCA54 /* Resource.swift */; };
 		04D07EFF21B6B2D200FFCA54 /* Dimesion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D07EFC21B6B2D200FFCA54 /* Dimesion.swift */; };
 		04D07F0021B6B2D200FFCA54 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D07EFD21B6B2D200FFCA54 /* Theme.swift */; };
@@ -70,10 +69,9 @@ objects = {
 		044829BD21AE46C000AD2CAD /* BaseUIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseUIView.swift; sourceTree = "<group>"; };
 		045964EE21C790A8005BF5C2 /* CategroryArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategroryArray.swift; sourceTree = "<group>"; };
 		048E092F21C8A24900A453AC /* CategoryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryController.swift; sourceTree = "<group>"; };
-
-		048E093321C8A35700A453AC /* CategroryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategroryCell.swift; sourceTree = "<group>"; };
-		04BC302321DDC03100FD60A0 /* CategroryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CategroryCell.xib; path = ../../../../../../FoodProjectTest/iOS_The_Meal_DB_01/TheMealDB/TheMealDB/Moduls/CategroryScreen/View/CategroryCell.xib; sourceTree = "<group>"; };
-
+		04B5747F21EFE3AD00BD3D39 /* AMealViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AMealViewController.swift; sourceTree = "<group>"; };
+		04B5748321EFE3C500BD3D39 /* DBManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBManager.swift; sourceTree = "<group>"; };
+		04BC302321DDC03100FD60A0 /* CategroryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CategroryCell.xib; path = /FoodProjectTest/iOS_The_Meal_DB_01/TheMealDB/TheMealDB/Moduls/CategroryScreen/View/CategroryCell.xib; sourceTree = "<absolute>"; };
 		04D07EFB21B6B2D200FFCA54 /* Resource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
 		04D07EFC21B6B2D200FFCA54 /* Dimesion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dimesion.swift; sourceTree = "<group>"; };
 		04D07EFD21B6B2D200FFCA54 /* Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
@@ -161,6 +159,7 @@ runOnlyForDeploymentPostprocessing = 0;
 				04278DB921ACFAE4007CB3F0 /* Products */,
 				EAC0D2D9329A0E9EF593FD4B /* Pods */,
 				74A200E48A1638EA2A0C1B62 /* Frameworks */,
+				04B5747D21EFE36B00BD3D39 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -231,7 +230,9 @@ runOnlyForDeploymentPostprocessing = 0;
 				044829C421AE491E00AD2CAD /* HomeScreen */,
 				048E092C21C8A1E700A453AC /* CategroryScreen */,
 				04EE438A21E49F8300AF1703 /* AllMealOfCategrory */,
-				041367C221EEC541007B1EF7 /* AMealScreen */,
+
+				04B5747E21EFE38100BD3D39 /* AMealScreen */,
+				04B5748221EFE3C500BD3D39 /* CoreData */,
 			);
 			path = Moduls;
 			sourceTree = "<group>";
@@ -276,10 +277,32 @@ runOnlyForDeploymentPostprocessing = 0;
 		048E092E21C8A20900A453AC /* View */ = {
 			isa = PBXGroup;
 			children = (
-				04B0759421E785B000AE1BC5 /* CategroryCell.swift */,
-				04B0759521E785B000AE1BC5 /* CategroryCell.xib */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		04B5747D21EFE36B00BD3D39 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				04BC302321DDC03100FD60A0 /* CategroryCell.xib */,
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
+		04B5747E21EFE38100BD3D39 /* AMealScreen */ = {
+			isa = PBXGroup;
+			children = (
+				04B5747F21EFE3AD00BD3D39 /* AMealViewController.swift */,
+			);
+			path = AMealScreen;
+			sourceTree = "<group>";
+		};
+		04B5748221EFE3C500BD3D39 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				04B5748321EFE3C500BD3D39 /* DBManager.swift */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 		04D07F0121B6B2E400FFCA54 /* Custom */ = {
@@ -311,8 +334,6 @@ runOnlyForDeploymentPostprocessing = 0;
 		04D07F0E21B6B32000FFCA54 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				04B0759021E7859D00AE1BC5 /* MealCell.swift */,
-				04B0759121E7859D00AE1BC5 /* MealCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -529,17 +550,11 @@ targets = (
 				04278DC921ACFAE4007CB3F0 /* LaunchScreen.storyboard in Resources */,
 				04EE439321E49FF200AF1703 /* HeaderCell.xib in Resources */,
 				04278DC621ACFAE4007CB3F0 /* Assets.xcassets in Resources */,
-				041367CB21EEC5B6007B1EF7 /* FootCell.xib in Resources */,
-				04D07F2E21B6C32200FFCA54 /* CategoriesViewCell.xib in Resources */,
-				04BC302621DDC05700FD60A0 /* CategoryController.xib in Resources */,
+
+				04BC302421DDC03100FD60A0 /* CategroryCell.xib in Resources */,
 				04D07F2321B6B32000FFCA54 /* CategoriesViewController.xib in Resources */,
 				04E2CFE121E83B530005C643 /* CategoryCellSecond.xib in Resources */,
 				04E2CFE321E83B800005C643 /* CategoryController.xib in Resources */,
-				04B0759721E785B100AE1BC5 /* CategroryCell.xib in Resources */,
-				041367C921EEC5B0007B1EF7 /* IngredientsCell.xib in Resources */,
-				041367C721EEC5A8007B1EF7 /* AMealViewController.xib in Resources */,
-				04B0759321E7859D00AE1BC5 /* MealCell.xib in Resources */,
-				042233FC21EA15BC00EE4749 /* AllMealOfCategrory.xib in Resources */,
 
 				04D07F1D21B6B32000FFCA54 /* MealsViewController.xib in Resources */,
 				042DE5B121E781E60043AD75 /* HomeViewController.xib in Resources */,
@@ -604,6 +619,7 @@ showEnvVarsInLog = 0;
 				04278DBC21ACFAE4007CB3F0 /* AppDelegate.swift in Sources */,
 				048E093121C8A24900A453AC /* CategoryController.swift in Sources */,
 				04EE439221E49FF200AF1703 /* HeaderCell.swift in Sources */,
+				04B5748421EFE3C500BD3D39 /* DBManager.swift in Sources */,
 				04D07F2D21B6C32200FFCA54 /* CategoriesViewCell.swift in Sources */,
 				04E9730321C742CE00E8E746 /* Urls.swift in Sources */,
 				04D07F0021B6B2D200FFCA54 /* Theme.swift in Sources */,
@@ -618,6 +634,7 @@ showEnvVarsInLog = 0;
 				045964EF21C790A9005BF5C2 /* CategroryArray.swift in Sources */,
 				04E9730221C742CE00E8E746 /* CategroryRequest.swift in Sources */,
 				04FA2FAA21C7799F003E13FA /* BaseResults.swift in Sources */,
+				04B5748021EFE3AD00BD3D39 /* AMealViewController.swift in Sources */,
 				04F90E1221C892E400AA2D36 /* MealResult.swift in Sources */,
 				04D07F1C21B6B32000FFCA54 /* MealsViewController.swift in Sources */,
 				04F90E1421C892F300AA2D36 /* MealRequest.swift in Sources */,
@@ -625,12 +642,10 @@ showEnvVarsInLog = 0;
 				04F90E1121C892E400AA2D36 /* Meal.swift in Sources */,
 				04D07F0521B6B31600FFCA54 /* HomeViewController.swift in Sources */,
 				04E972FF21C742CE00E8E746 /* ErrorResponse.swift in Sources */,
-				04B0759221E7859D00AE1BC5 /* MealCell.swift in Sources */,
 				04278DC421ACFAE4007CB3F0 /* TheMealDB.xcdatamodeld in Sources */,
 				04E9730521C742CE00E8E746 /* APIService.swift in Sources */,
 				04F90E0E21C892D000AA2D36 /* MealRepositoty.swift in Sources */,
 				044829BE21AE46C000AD2CAD /* BaseViewController.swift in Sources */,
-				04B0759621E785B100AE1BC5 /* CategroryCell.swift in Sources */,
 				04D07EFF21B6B2D200FFCA54 /* Dimesion.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
