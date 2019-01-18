@@ -7,7 +7,9 @@ objectVersion = 48;
 objects = {
 
 /* Begin PBXBuildFile section */
-		042233FC21EA15BC00EE4749 /* AllMealOfCategrory.xib in Resources */ = {isa = PBXBuildFile; fileRef = 042233FB21EA15BC00EE4749 /* AllMealOfCategrory.xib */; };
+		041367C721EEC5A8007B1EF7 /* AMealViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 041367C621EEC5A8007B1EF7 /* AMealViewController.xib */; };
+		041367C921EEC5B0007B1EF7 /* IngredientsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 041367C821EEC5B0007B1EF7 /* IngredientsCell.xib */; };
+		041367CB21EEC5B6007B1EF7 /* FootCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 041367CA21EEC5B6007B1EF7 /* FootCell.xib */; };
 		04278DBC21ACFAE4007CB3F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04278DBB21ACFAE4007CB3F0 /* AppDelegate.swift */; };
 		04278DC421ACFAE4007CB3F0 /* TheMealDB.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 04278DC221ACFAE4007CB3F0 /* TheMealDB.xcdatamodeld */; };
 		04278DC621ACFAE4007CB3F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04278DC521ACFAE4007CB3F0 /* Assets.xcassets */; };
@@ -54,7 +56,9 @@ objects = {
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		042233FB21EA15BC00EE4749 /* AllMealOfCategrory.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AllMealOfCategrory.xib; sourceTree = "<group>"; };
+		041367C621EEC5A8007B1EF7 /* AMealViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AMealViewController.xib; sourceTree = "<group>"; };
+		041367C821EEC5B0007B1EF7 /* IngredientsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IngredientsCell.xib; sourceTree = "<group>"; };
+		041367CA21EEC5B6007B1EF7 /* FootCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FootCell.xib; sourceTree = "<group>"; };
 		04278DB821ACFAE4007CB3F0 /* TheMealDB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheMealDB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04278DBB21ACFAE4007CB3F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04278DC321ACFAE4007CB3F0 /* TheMealDB.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TheMealDB.xcdatamodel; sourceTree = "<group>"; };
@@ -116,12 +120,38 @@ runOnlyForDeploymentPostprocessing = 0;
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		042233FA21EA15BC00EE4749 /* Controller */ = {
+		041367C221EEC541007B1EF7 /* AMealScreen */ = {
 			isa = PBXGroup;
 			children = (
-				042233FB21EA15BC00EE4749 /* AllMealOfCategrory.xib */,
+				041367C321EEC567007B1EF7 /* Controller */,
+				041367C421EEC57D007B1EF7 /* Body */,
+				041367C521EEC581007B1EF7 /* Footer */,
+			);
+			path = AMealScreen;
+			sourceTree = "<group>";
+		};
+		041367C321EEC567007B1EF7 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				041367C621EEC5A8007B1EF7 /* AMealViewController.xib */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		041367C421EEC57D007B1EF7 /* Body */ = {
+			isa = PBXGroup;
+			children = (
+				041367C821EEC5B0007B1EF7 /* IngredientsCell.xib */,
+			);
+			path = Body;
+			sourceTree = "<group>";
+		};
+		041367C521EEC581007B1EF7 /* Footer */ = {
+			isa = PBXGroup;
+			children = (
+				041367CA21EEC5B6007B1EF7 /* FootCell.xib */,
+			);
+			path = Footer;
 			sourceTree = "<group>";
 		};
 		04278DAF21ACFAE4007CB3F0 = {
@@ -201,7 +231,7 @@ runOnlyForDeploymentPostprocessing = 0;
 				044829C421AE491E00AD2CAD /* HomeScreen */,
 				048E092C21C8A1E700A453AC /* CategroryScreen */,
 				04EE438A21E49F8300AF1703 /* AllMealOfCategrory */,
-				04EE438F21E49FF100AF1703 /* Header Collection View */,
+				041367C221EEC541007B1EF7 /* AMealScreen */,
 			);
 			path = Moduls;
 			sourceTree = "<group>";
@@ -499,15 +529,15 @@ targets = (
 				04278DC921ACFAE4007CB3F0 /* LaunchScreen.storyboard in Resources */,
 				04EE439321E49FF200AF1703 /* HeaderCell.xib in Resources */,
 				04278DC621ACFAE4007CB3F0 /* Assets.xcassets in Resources */,
-
-				04D07F2121B6B32000FFCA54 /* MealCell.xib in Resources */,
-				04BC302421DDC03100FD60A0 /* CategroryCell.xib in Resources */,
+				041367CB21EEC5B6007B1EF7 /* FootCell.xib in Resources */,
+				04D07F2E21B6C32200FFCA54 /* CategoriesViewCell.xib in Resources */,
+				04BC302621DDC05700FD60A0 /* CategoryController.xib in Resources */,
 				04D07F2321B6B32000FFCA54 /* CategoriesViewController.xib in Resources */,
-
 				04E2CFE121E83B530005C643 /* CategoryCellSecond.xib in Resources */,
 				04E2CFE321E83B800005C643 /* CategoryController.xib in Resources */,
-
 				04B0759721E785B100AE1BC5 /* CategroryCell.xib in Resources */,
+				041367C921EEC5B0007B1EF7 /* IngredientsCell.xib in Resources */,
+				041367C721EEC5A8007B1EF7 /* AMealViewController.xib in Resources */,
 				04B0759321E7859D00AE1BC5 /* MealCell.xib in Resources */,
 				042233FC21EA15BC00EE4749 /* AllMealOfCategrory.xib in Resources */,
 

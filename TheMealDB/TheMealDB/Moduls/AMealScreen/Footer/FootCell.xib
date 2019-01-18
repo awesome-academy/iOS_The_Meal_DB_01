@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FootCell" id="wS4-mz-YKh" customClass="FootCell" customModule="TheMealDB" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="40"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wS4-mz-YKh" id="hiJ-7m-DaQ">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="39.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Oval" translatesAutoresizingMaskIntoConstraints="NO" id="yPK-yw-3c0">
+                        <rect key="frame" x="0.0" y="8" width="24" height="24"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="24" id="BlZ-3q-Og0"/>
+                            <constraint firstAttribute="height" constant="24" id="VKz-Q2-FPN"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F3e-Fg-uN7" userLabel="10">
+                        <rect key="frame" x="0.0" y="8" width="24" height="24"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="24" id="9QA-ux-v5g"/>
+                            <constraint firstAttribute="height" constant="24" id="qJ1-z6-5Un"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="Label" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="59P-db-3nZ">
+                        <rect key="frame" x="39" y="10" width="336" height="19.5"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                        <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="F3e-Fg-uN7" firstAttribute="centerY" secondItem="hiJ-7m-DaQ" secondAttribute="centerY" id="1Lu-B4-PNn"/>
+                    <constraint firstItem="59P-db-3nZ" firstAttribute="top" secondItem="hiJ-7m-DaQ" secondAttribute="top" constant="10" id="AAo-0j-2aI"/>
+                    <constraint firstItem="yPK-yw-3c0" firstAttribute="centerY" secondItem="hiJ-7m-DaQ" secondAttribute="centerY" id="IG7-UQ-MkH"/>
+                    <constraint firstItem="59P-db-3nZ" firstAttribute="leading" secondItem="yPK-yw-3c0" secondAttribute="trailing" constant="15" id="MLL-ZS-T5d"/>
+                    <constraint firstItem="F3e-Fg-uN7" firstAttribute="leading" secondItem="hiJ-7m-DaQ" secondAttribute="leading" id="UyT-rL-eVV"/>
+                    <constraint firstAttribute="trailing" secondItem="59P-db-3nZ" secondAttribute="trailing" id="WKr-ii-mLa"/>
+                    <constraint firstItem="yPK-yw-3c0" firstAttribute="leading" secondItem="hiJ-7m-DaQ" secondAttribute="leading" id="X2g-ZZ-ztV"/>
+                    <constraint firstAttribute="bottom" secondItem="59P-db-3nZ" secondAttribute="bottom" constant="10" id="laQ-qQ-H8e"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="InstructionItemLabel" destination="59P-db-3nZ" id="F3T-Fq-OKp"/>
+                <outlet property="numericalLabel" destination="F3e-Fg-uN7" id="ZoA-ET-Si3"/>
+            </connections>
+            <point key="canvasLocation" x="-498" y="173"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="Oval" width="18" height="18"/>
+    </resources>
+</document>
