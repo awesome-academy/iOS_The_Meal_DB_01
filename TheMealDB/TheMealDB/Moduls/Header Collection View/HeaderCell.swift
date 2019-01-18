@@ -11,7 +11,7 @@ import UIKit
 final class HeaderCell: UICollectionViewCell {
     
     @IBOutlet weak private var categoryImage: UIImageView!
-    @IBOutlet weak private var categoryName: UILabel!
+    @IBOutlet weak private var categoryNameLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -19,7 +19,7 @@ final class HeaderCell: UICollectionViewCell {
     
     func configure(data: Categrory) {
         let url = URL(string: data.strCategoryThumb)
-        categoryImage.sd_setImage(with: url, completed: nil)
-        categoryName.text = data.strCategory
+        categoryImage.sd_setImage(with: url, placeholderImage: #imageLiteral(resourceName: "noImage"))
+//        categoryName.text = data.strCategory
     }
 }
