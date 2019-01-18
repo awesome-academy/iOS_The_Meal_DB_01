@@ -9,6 +9,10 @@
 import UIKit
 
 class CategoriesViewController: BaseViewController {
+    private struct Constants {
+        static let nibName = "CategroryCell"
+    }
+    
     @IBOutlet weak private var customCollectionView: UICollectionView!
     
     private var categoryArray = [Categrory]() {
@@ -38,14 +42,14 @@ class CategoriesViewController: BaseViewController {
                 let alertController = UIAlertController(title: "Error", message: error?.errorMessage, preferredStyle: .alert)
                 let okAlertButton = UIAlertAction(title: "OK", style: .default, handler: nil)
                 alertController.addAction(okAlertButton)
-                self.present(alertController, animated: true, completion: nil)
+                present(alertController, animated: true, completion: nil)
             }
         }
     }
     
     private func register() {
-        let nibName = UINib(nibName: "CategroryCell", bundle: nil)
-        customCollectionView.register(nibName, forCellWithReuseIdentifier: "CategroryCell")
+        let nibName = UINib(nibName: Constants.nibName, bundle: nil)
+        customCollectionView.register(nibName, forCellWithReuseIdentifier: Constants.nibName)
         customCollectionView.dataSource = self
         customCollectionView.delegate = self
     }
@@ -55,9 +59,9 @@ extension CategoriesViewController: UICollectionViewDataSource, UICollectionView
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return categoryArray.count
     }
-    
+
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CategroryCell", for: indexPath) as? CategroryCell else {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.nibName, for: indexPath) as? CategroryCell else {
             return UICollectionViewCell()
         }
         cell.configuage(data: categoryArray[indexPath.row])

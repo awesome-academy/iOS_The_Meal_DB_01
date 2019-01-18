@@ -18,7 +18,7 @@ public class Resource {
     
     public struct Images {
         public static var alertButton: UIImage? = UIImage(named: "alertButton")
-        public static var searchButton: UIImage? = UIImage(named: "searchButton")
+        public static var searchButton: UIImage? = UIImage(named: "SearchButton")
         public static var backButton: UIImage? = UIImage(named: "backButton")
         public static var homeGrey: UIImage? = UIImage(named: "homegrey")
         public static var homeOrange: UIImage? = UIImage(named: "homeorange")

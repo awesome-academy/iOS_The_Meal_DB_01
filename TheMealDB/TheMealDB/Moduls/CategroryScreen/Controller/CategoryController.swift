@@ -9,6 +9,11 @@
 import UIKit
 
 class CategoryController: BaseViewController {
+    private struct Constants {
+        static let cellHeight = Dimension.sharedInstance.heightCategroryCellSecond
+        static let nibName = "CategoryCellSecond"
+    }
+    
     //  MARK: - UI Element
     @IBOutlet weak private var collectionView: UICollectionView!
     
@@ -23,8 +28,8 @@ class CategoryController: BaseViewController {
     private let searchBar = UISearchBar()
     
     //  MARK: - Life Cycle
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func initialize() {
+        super.initialize()
         initCollectionView()
         loadData()
         setUpNavigationBar()
@@ -34,8 +39,8 @@ class CategoryController: BaseViewController {
     private func initCollectionView() {
         collectionView.dataSource = self
         collectionView.delegate = self
-        let nibName = UINib(nibName: "CategroryCell", bundle: nil)
-        collectionView.register(nibName, forCellWithReuseIdentifier: "CategroryCell")
+        let nibName = UINib(nibName: Constants.nibName, bundle: nil)
+        collectionView.register(nibName, forCellWithReuseIdentifier: Constants.nibName)
         collectionView.backgroundColor = .clear
     }
     
@@ -51,10 +56,10 @@ class CategoryController: BaseViewController {
                 self.categories = category
                 self.filterCategories = category
             case .failure(let error):
-                let alertController = UIAlertController(title: "Error", message: error?.errorMessage, preferredStyle: .alert)
-                let okAlertButton = UIAlertAction(title: "OK", style: .default, handler: nil)
-                alertController.addAction(okAlertButton)
-                self.present(alertController, animated: true, completion: nil)
+                guard let error = error else {
+                    return
+                }
+                self.showErrorAlert(error: error)
             }
         }
         let mealRepository: MealRepository = MealRepositoryImp(api: APIService.share)
@@ -67,12 +72,19 @@ class CategoryController: BaseViewController {
                 }
                 self.meals = meals
             case .failure(let error):
-                let alertController = UIAlertController(title: "Error", message: error?.errorMessage, preferredStyle: .alert)
-                let okAlertButton = UIAlertAction(title: "OK", style: .default, handler: nil)
-                alertController.addAction(okAlertButton)
-                self.present(alertController, animated: true, completion: nil)
+                guard let error = error else {
+                    return
+                }
+                self.showErrorAlert(error: error)
             }
         }
+    }
+    
+    private func showErrorAlert(error: BaseError) {
+        let alertController = UIAlertController(title: "Error", message: error.errorMessage, preferredStyle: .alert)
+        let okAlertButton = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alertController.addAction(okAlertButton)
+        present(alertController, animated: true, completion: nil)
     }
     
     private func setUpNavigationBar() {
@@ -80,7 +92,7 @@ class CategoryController: BaseViewController {
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationItem.title = Resource.Navigation.categoriesTitle
-        let searchBarButton = UIBarButtonItem(image: Resource.Images.searchButton,
+        let searchBarButton = UIBarButtonItem(image: Resource.Images.searchButton?.withRenderingMode(.alwaysOriginal),
                                               style: .plain,
                                               target: self, action: #selector(setUpSearchBar))
         self.navigationItem.rightBarButtonItem = searchBarButton
@@ -101,17 +113,19 @@ extension CategoryController: UISearchBarDelegate {
             filterCategories = categories
             return
         }
-        filterCategories = categories.filter { category -> Bool in
-            guard let text = searchBar.text else {
-                return false
-            }
-            return (category.strCategory.contains(text))
+        filterCategories = categories
+            .filter { category -> Bool in
+                guard let text = searchBar.text else {
+                    return false
+                }
+                return (category.strCategory.contains(text))
         }
     }
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         self.navigationItem.titleView = nil
         filterCategories = categories
+        searchBar.text = ""
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
@@ -125,20 +139,30 @@ extension CategoryController: UICollectionViewDataSource, UICollectionViewDelega
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CategroryCell", for: indexPath) as? CategroryCell else {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.nibName, for: indexPath) as? CategoryCellSecond else {
             return UICollectionViewCell()
         }
-        cell.configuage(data: filterCategories[indexPath.row])
+        cell.configure(data: filterCategories[indexPath.row])
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        var mealsOfACategrory = [Meal]()
+        for item in meals {
+            if item.strCategory == categories[indexPath.row].strCategory {
+                mealsOfACategrory.append(item)
+            }
+        }
+        let allMealOfCategrory = AllMealOfCategrory()
+        allMealOfCategrory.category = filterCategories[indexPath.row]
+        allMealOfCategrory.mealsOfACategrory = mealsOfACategrory
+        let navigationAllmealController = UINavigationController(rootViewController: allMealOfCategrory)
+        present(navigationAllmealController, animated: true, completion: nil)
     }
 }
 
 extension CategoryController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.frame.size.width/2 - 5, height: SizeForCell.height)
+        return CGSize(width: collectionView.frame.size.width, height: Constants.cellHeight)
     }
-}
-
-private struct SizeForCell {
-    static let height = Dimension.sharedInstance.heightCategroryCell
 }
